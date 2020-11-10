@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class POIObject : MonoBehaviour
 {
+    public string message;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class POIObject : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Debug.Log("player intersect with poi");
+            Debug.Log("player intersect with poi with message :" + message);
         }
     }
 }
