@@ -1,6 +1,8 @@
+using Mapbox.Unity.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ARManagerScript : MonoBehaviour
 {
@@ -15,4 +17,17 @@ public class ARManagerScript : MonoBehaviour
     {
         
     }
+
+    public void EnterARScene()
+    {
+        Debug.Log("Entering AR Scene");
+        SceneManager.LoadScene("ARScene", LoadSceneMode.Additive);
+    }
+
+    public void EnterMapScene()
+    {
+        Debug.Log("Entering AR Scene");
+        SceneManager.LoadScene("MapScene", LoadSceneMode.Additive);
+    }
+    
 }

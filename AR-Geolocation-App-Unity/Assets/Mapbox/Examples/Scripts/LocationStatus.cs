@@ -27,28 +27,30 @@
 		{
 			Location currLoc = _locationProvider.CurrentLocation;
 
-			if (currLoc.IsLocationServiceInitializing)
-			{
-				_statusText.text = "location services are initializing";
-			}
-			else
-			{
-				if (!currLoc.IsLocationServiceEnabled)
+			/*
+				if (currLoc.IsLocationServiceInitializing)
 				{
-					_statusText.text = "location services not enabled";
+					_statusText.text = "location services are initializing";
 				}
 				else
 				{
-					if (currLoc.LatitudeLongitude.Equals(Vector2d.zero))
+					if (!currLoc.IsLocationServiceEnabled)
 					{
-						_statusText.text = "Waiting for location ....";
+						_statusText.text = "location services not enabled";
 					}
 					else
 					{
-						_statusText.text = string.Format("{0}", currLoc.LatitudeLongitude);
+						if (currLoc.LatitudeLongitude.Equals(Vector2d.zero))
+						{
+							_statusText.text = "Waiting for location ....";
+						}
+						else
+						{
+							_statusText.text = string.Format("{0}", currLoc.LatitudeLongitude);
+						}
 					}
 				}
-			}
+			*/
 
 		}
 	}
