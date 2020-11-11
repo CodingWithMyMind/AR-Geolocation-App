@@ -21,13 +21,13 @@ public class ARManagerScript : MonoBehaviour
     public void EnterARScene()
     {
         Debug.Log("Entering AR Scene");
-        SceneManager.LoadScene("ARScene", LoadSceneMode.Additive);
+        SceneManager.LoadScene("ARScene", LoadSceneMode.Single);
     }
 
     public void EnterMapScene()
     {
         Debug.Log("Entering AR Scene");
-        SceneManager.LoadScene("MapScene", LoadSceneMode.Additive);
+        SceneManager.LoadScene("MapSceneExperimental", LoadSceneMode.Single);
     }
     
 }
