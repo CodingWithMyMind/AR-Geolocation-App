@@ -50,6 +50,14 @@ public class POIObject : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            UIButtonToEnterAR.SetActive(true);
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         // Exit POI
