@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 27192565967896066}
   - component: {fileID: 8818134432862039171}
   m_Layer: 0
-  m_Name: POI Ben B
+  m_Name: POI Ben C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d80c1a202911a4a37a3da59992876dfc, type: 2}
+  - {fileID: 2100000, guid: 9b5d75722d424804fa0c0efaa228c3db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0617504c7ba5622498a720c69eebe24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Bens Room POI
+  message: This is Bens A POI
   collected: 0
   txtStatus: {fileID: 0}
   StatusPanel: {fileID: 0}

@@ -28,7 +28,7 @@ public class POIObject : MonoBehaviour
     void Start()
     {
 
-        //UIButtonToEnterAR = GameObject.Find("Button");
+        UIButtonToEnterAR = GameObject.Find("Button");
         DisplayStatus("Hello World");
     }
 
@@ -57,8 +57,10 @@ public class POIObject : MonoBehaviour
         {
             //Debug.Log("player intersect with poi with message :" + message);
             UIButtonToEnterAR.SetActive(false);
+
+
             StatusPanel.SetActive(false);
-            DisplayStatus("123");
+            //DisplayStatus("123");
         }
     }
 
