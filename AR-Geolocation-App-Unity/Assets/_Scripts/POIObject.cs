@@ -58,7 +58,7 @@ public class POIObject : MonoBehaviour
             //Debug.Log("player intersect with poi with message :" + message);
             UIButtonToEnterAR.SetActive(false);
             StatusPanel.SetActive(false);
-            //DisplayStatus("");
+            DisplayStatus("123");
         }
     }
 
