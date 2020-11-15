@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Mapbox/Examples/0_PrefabScenes/Location-basedGame.unity
     guid: 42f6aa7ce7a604f16ade319663f46ceb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ARScene.unity
     guid: 7dda0debb3775cb47adf67f8749047d0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/KenARScene.unity
     guid: 1c1dd1b14feef3946a9de7942572fe41
   - enabled: 0

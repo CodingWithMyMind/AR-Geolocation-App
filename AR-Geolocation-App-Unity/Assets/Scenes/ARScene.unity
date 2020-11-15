@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5a377a833778a4083f9f70a8d05057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placedPrefab: {fileID: 0}
+  placedPrefab: {fileID: 1426685750389044, guid: 7f70e17a8741e73489d74cd6bcc6ee1a, type: 3}
   arPlaneManager: {fileID: 1764136511}
 --- !u!114 &1764136511
 MonoBehaviour:
