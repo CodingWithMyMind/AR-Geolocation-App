@@ -11,6 +11,8 @@ public class MapDebug : MonoBehaviour
     public GameObject UIButtonToEnterAR;
     public Toggle toggle;
 
+    public Text currentPOIText;
+
     public Text coordinateText;
     bool _isInitialized;
 
@@ -67,6 +69,9 @@ public class MapDebug : MonoBehaviour
             var map = LocationProviderFactory.Instance.mapManager;
             //transform.localPosition = map.GeoToWorldPosition(LocationProvider.CurrentLocation.LatitudeLongitude);
             coordinateText.text = "Lat: "+ LocationProvider.CurrentLocation.LatitudeLongitude.x.ToString() +" Lon: "+ LocationProvider.CurrentLocation.LatitudeLongitude.y.ToString();
-        }
+
+
+            currentPOIText.text = Player.Instance.CurrentAtPOI;
+}
     }
 }
