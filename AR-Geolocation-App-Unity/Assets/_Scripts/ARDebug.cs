@@ -18,7 +18,7 @@ public class ARDebug : MonoBehaviour
         
     }
 
-    void ToggleArrow()
+    public void ToggleArrow()
     {
         currentState = arrow.activeSelf;
         arrow.SetActive(!currentState);

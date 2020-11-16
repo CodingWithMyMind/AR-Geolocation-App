@@ -93,7 +93,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             // Disable the arrow to start; enable it later if we get directional light info
             if (arrow)
             {
-                arrow.gameObject.SetActive(false);
+                //arrow.gameObject.SetActive(false);
             }
             Application.onBeforeRender += OnBeforeRender;
         }
@@ -159,7 +159,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             }
             else if (arrow)
             {
-                arrow.gameObject.SetActive(false);
+                //arrow.gameObject.SetActive(false);
                 mainLightDirection = null;
             }
 
