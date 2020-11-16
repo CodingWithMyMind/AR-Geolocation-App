@@ -15,11 +15,11 @@ public class POIObject : MonoBehaviour
     public GameObject txtStatus;
     public GameObject StatusPanel;
 
-    public GameObject UIButtonToEnterAR;
+    
 
     private void OnEnable()
     {
-        UIButtonToEnterAR = GameObject.Find("Button");
+        
         txtStatus = GameObject.Find("txtStatus");
         StatusPanel = GameObject.Find("StatusPanel");
 
@@ -28,7 +28,7 @@ public class POIObject : MonoBehaviour
     void Start()
     {
 
-        UIButtonToEnterAR = GameObject.Find("Button");
+
         DisplayStatus("Hello World");
     }
 
@@ -44,7 +44,7 @@ public class POIObject : MonoBehaviour
         if(other.tag == "Player")
         {
             //DisplayStatus("Hello World");
-            UIButtonToEnterAR.SetActive(true);
+     
             StatusPanel.SetActive(true);
             DisplayStatus(message);
         }
@@ -54,7 +54,7 @@ public class POIObject : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            UIButtonToEnterAR.SetActive(true);
+            
         }
     }
 
@@ -64,7 +64,7 @@ public class POIObject : MonoBehaviour
         if (other.tag == "Player")
         {
             //Debug.Log("player intersect with poi with message :" + message);
-            UIButtonToEnterAR.SetActive(false);
+       
 
 
             StatusPanel.SetActive(false);
