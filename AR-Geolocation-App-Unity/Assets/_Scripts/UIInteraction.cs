@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+
+public class UIInteraction : MonoBehaviour
 {
+
+    [SerializeField]
+    public Text text;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +19,10 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void click()
+    {
+        text.text = "Thats a click alright";
     }
 }
