@@ -50,6 +50,10 @@ public class Player : MonoBehaviour
             CurrentAtPOI = other.gameObject.name;
         }
     }
+    private void OnTriggerStay(Collider other)
+    {
+        UIButtonToEnterAR.SetActive(true);
+    }
 
     private void OnTriggerExit(Collider other)
     {
