@@ -22,7 +22,6 @@ public class MapDebug : MonoBehaviour
     {
         UIButtonToEnterAR = GameObject.Find("EnterARButton");
         LocationProviderFactory.Instance.mapManager.OnInitialized += () => _isInitialized = true;
-
     }
 
     // Update is called once per frame

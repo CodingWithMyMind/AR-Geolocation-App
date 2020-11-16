@@ -153,7 +153,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 m_Light.transform.rotation = Quaternion.LookRotation(mainLightDirection.Value);
                 if (arrow)
                 {
-                    arrow.gameObject.SetActive(true);
+                    //arrow.gameObject.SetActive(true);
                     arrow.rotation = Quaternion.LookRotation(mainLightDirection.Value);
                 }
             }
