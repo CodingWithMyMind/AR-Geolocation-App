@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 199567844588220584}
   - component: {fileID: 114674181514608572}
   - component: {fileID: 114143057649092886}
+  - component: {fileID: 5027638743589717472}
   m_Layer: 0
   m_Name: AR Point Cloud Debug Visualizer
   m_TagString: Untagged
@@ -862,7 +863,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
   EmissionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
@@ -4773,7 +4774,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4844,3 +4844,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468ea6c98cd64494abbc2c2f34d6cde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5027638743589717472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854016325464908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9487356b14d79479a9be9ede88c60b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Mode: 0

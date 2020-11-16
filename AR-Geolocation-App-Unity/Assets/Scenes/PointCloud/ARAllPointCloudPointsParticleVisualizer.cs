@@ -22,6 +22,8 @@ namespace UnityEngine.XR.ARFoundation
             /// Only draw the feature points from the current frame
             /// </summary>
             CurrentFrame,
+
+            None,
         }
 
         [SerializeField]
@@ -81,8 +83,9 @@ namespace UnityEngine.XR.ARFoundation
             {
                 case Mode.All:
                 {
-                    // Draw all the particles
-                    int particleIndex = 0;
+                       
+                        // Draw all the particles
+                        int particleIndex = 0;
                     foreach (var kvp in m_Points)
                     {
                         SetParticlePosition(particleIndex++, kvp.Value);
@@ -98,6 +101,17 @@ namespace UnityEngine.XR.ARFoundation
                     }
                     break;
                 }
+                case Mode.None:
+                    {
+
+                        Debug.Log("none");
+                        for (int i = 0; i < positions.Length; ++i)
+                        {
+                            SetParticlePosition(i, positions[0]);
+                        }
+                        break;
+                    }
+
             }
 
             // Remove any existing particles by setting remainingLifetime

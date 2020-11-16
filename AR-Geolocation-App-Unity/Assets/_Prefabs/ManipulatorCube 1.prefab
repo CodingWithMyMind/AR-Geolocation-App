@@ -220,7 +220,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_CustomReticle: {fileID: 0}
+  m_CustomReticle: {fileID: 1213152366626346, guid: d8dc5ee158efe7a4f9e1757f1db2f521, type: 3}
   m_ObjectGestureTranslationMode: 0
   m_MaxTranslationDistance: 10
 --- !u!114 &1218073160451459933
@@ -268,8 +268,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_CustomReticle: {fileID: 0}
-  m_MinScale: 0.75
-  m_MaxScale: 1.75
+  m_MinScale: 0.4
+  m_MaxScale: 5
   m_ElasticRatioLimit: 0
   m_Sensitivity: 0.75
   m_Elasticity: 0.15
@@ -361,7 +361,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5716108479203398054}
-  m_Mesh: {fileID: 4300000, guid: 7decc01d37b91114693d786b6538e5c4, type: 3}
+  m_Mesh: {fileID: 4300000, guid: fd6fbc878e23adf4c8d387a84bcd00db, type: 3}
 --- !u!23 &2955106594269699384
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -381,7 +381,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1c1bb185515a7b0479a8ce78015a04a7, type: 2}
+  - {fileID: 2100000, guid: 2a44ae95e37a2ce499809a354abe1139, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

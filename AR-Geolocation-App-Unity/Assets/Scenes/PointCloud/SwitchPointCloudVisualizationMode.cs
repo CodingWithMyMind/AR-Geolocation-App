@@ -35,7 +35,7 @@ public class SwitchPointCloudVisualizationMode : MonoBehaviour
 
     public void SwitchVisualizationMode()
     {
-        SetMode((ARAllPointCloudPointsParticleVisualizer.Mode)(((int)m_Mode + 1) % 2));
+        SetMode((ARAllPointCloudPointsParticleVisualizer.Mode)(((int)m_Mode + 1) % 3));
     }
 
     void OnEnable()
@@ -65,13 +65,17 @@ public class SwitchPointCloudVisualizationMode : MonoBehaviour
 
                 m_StringBuilder.Append(" points in current frame.");
             }
-            else
+            else if(m_Mode == ARAllPointCloudPointsParticleVisualizer.Mode.All)
             {
                 var visualizer = pointCloud.GetComponent<ARAllPointCloudPointsParticleVisualizer>();
                 if (visualizer)
                 {
                     m_StringBuilder.Append($"{visualizer.totalPointCount} total points");
                 }
+            }
+            else if(m_Mode == ARAllPointCloudPointsParticleVisualizer.Mode.None)
+            {
+                m_StringBuilder.Append(" Hiding tracking Points");
             }
         }
         if (log)
@@ -93,6 +97,10 @@ public class SwitchPointCloudVisualizationMode : MonoBehaviour
                     break;
                 case ARAllPointCloudPointsParticleVisualizer.Mode.CurrentFrame:
                     text.text = "Current Frame";
+                    break;
+
+                case ARAllPointCloudPointsParticleVisualizer.Mode.None:
+                    text.text = "Show None";
                     break;
             }
         }
