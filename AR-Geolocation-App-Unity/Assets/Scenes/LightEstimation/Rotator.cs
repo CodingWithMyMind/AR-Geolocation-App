@@ -10,8 +10,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         void Update()
         {
-
-
             this.transform.Rotate(0.3f, 0, 0, Space.Self);
         }
     }
