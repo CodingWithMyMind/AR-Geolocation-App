@@ -704,7 +704,7 @@ PrefabInstance:
       objectReference: {fileID: 780310505}
     - target: {fileID: 3546800895850743735, guid: 30c651ebcbba7af49b27719335cbeac5, type: 3}
       propertyPath: m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3546800895850743735, guid: 30c651ebcbba7af49b27719335cbeac5, type: 3}
       propertyPath: m_ToggleButton
@@ -2262,7 +2262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2899576277654282648, guid: 76335271ab155414489c4584939b588d, type: 3}
       propertyPath: m_Name
-      value: WorldSpaceObject
+      value: Example 1
       objectReference: {fileID: 0}
     - target: {fileID: 2899576277654282650, guid: 76335271ab155414489c4584939b588d, type: 3}
       propertyPath: m_RootOrder

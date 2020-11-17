@@ -55,6 +55,10 @@ namespace UnityEngine.XR.ARFoundation
             m_Particles[index].remainingLifetime = 1f;
         }
 
+        private void Start()
+        {
+            mode = Mode.CurrentFrame;
+        }
         void RenderPoints()
         {
             if (!m_PointCloud.positions.HasValue)

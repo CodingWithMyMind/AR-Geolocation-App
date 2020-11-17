@@ -38,9 +38,13 @@ public class SwitchPointCloudVisualizationMode : MonoBehaviour
         SetMode((ARAllPointCloudPointsParticleVisualizer.Mode)(((int)m_Mode + 1) % 3));
     }
 
+    private void Start()
+    {
+        SetMode(ARAllPointCloudPointsParticleVisualizer.Mode.CurrentFrame);
+    }
     void OnEnable()
     {
-        SetMode(m_Mode);
+        SetMode(ARAllPointCloudPointsParticleVisualizer.Mode.CurrentFrame);
         GetComponent<ARPointCloudManager>().pointCloudsChanged += OnPointCloudsChanged;
     }
 
