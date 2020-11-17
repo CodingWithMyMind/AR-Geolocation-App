@@ -16,6 +16,9 @@
 		[SerializeField]
 		float _zoomSpeed = 0.25f;
 
+
+		[SerializeField]
+		Transform otherTransform;
 		[SerializeField]
 		Transform newCameraParent;
 
@@ -37,7 +40,7 @@
 		private Plane _groundPlane = new Plane(Vector3.up, 0);
 		private bool _dragStartedOnUI = false;
 
-		public bool cameraDetached = false;
+		public bool cameraAtachedToPlayer = true;
 
 		void Awake()
 		{
@@ -54,16 +57,18 @@
 
 		public void Update()
 		{
+			if (Input.GetMouseButtonDown(0))
+            {
+
+				if (cameraAtachedToPlayer)
+				{
+					DetachFromPlayer();
+				}
+			}
 			if (Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject())
 			{
 				_dragStartedOnUI = true;
 
-                if (!cameraDetached)
-                {
-					DetachFromPlayer();
-					cameraDetached = true;
-				}
-				
 			}
 
 			if (Input.GetMouseButtonUp(0))
@@ -74,13 +79,28 @@
 
 		public void FollowPlayer()
         {
-			cameraDetached = false;
-			_referenceCamera.transform.parent = Player.Instance.transform;
+			Debug.Log("Camera attached to player");
+			cameraAtachedToPlayer = true;
+			// position for camera
+			Vector3 vec = new Vector3(0, 100, 0);
+			// roation for camera
+			Vector3 defaultRotation = new Vector3(80, 0, 0);
+
+			_referenceCamera.transform.SetParent(Player.Instance.transform);
+			_referenceCamera.transform.localPosition = vec;
+			_referenceCamera.transform.localEulerAngles = defaultRotation;
+			//_referenceCamera.transform.parent = Player.Instance.transform;
 		}
 
 		public void DetachFromPlayer()
         {
-			_referenceCamera.transform.parent = newCameraParent;
+			Debug.Log("Camera detached from player");
+			cameraAtachedToPlayer = false;
+			_referenceCamera.transform.SetParent(otherTransform);
+
+			_referenceCamera.transform.SetParent(newCameraParent);
+
+			//_referenceCamera.transform.parent = newCameraParent;
 		}
 
 

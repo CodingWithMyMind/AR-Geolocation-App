@@ -81,6 +81,10 @@ public class SwitchPointCloudVisualizationMode : MonoBehaviour
             {
                 m_StringBuilder.Append(" Hiding tracking Points");
             }
+            else
+            {
+                m_StringBuilder.Append(" Case");
+            }
         }
         if (log)
         {

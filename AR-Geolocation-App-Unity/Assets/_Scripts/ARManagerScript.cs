@@ -33,7 +33,7 @@ public class ARManagerScript : MonoBehaviour
     public void EnterMapScene()
     {
         Debug.Log("Entering AR Scene");
-        SceneManager.LoadScene("MapSceneExperimental", LoadSceneMode.Single);
+        SceneManager.LoadScene("MapSceneLight", LoadSceneMode.Single);
     }
 
     public void Quit()

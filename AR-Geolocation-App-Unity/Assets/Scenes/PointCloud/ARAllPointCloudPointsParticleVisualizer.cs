@@ -7,6 +7,8 @@ namespace UnityEngine.XR.ARFoundation
     /// <summary>
     /// Renders all points in an <see cref="ARPointCloud"/> as a <c>ParticleSystem</c>, persisting them all.
     /// </summary>
+    /// 
+
     [RequireComponent(typeof(ARPointCloud))]
     [RequireComponent(typeof(ParticleSystem))]
     public sealed class ARAllPointCloudPointsParticleVisualizer : MonoBehaviour
@@ -25,6 +27,7 @@ namespace UnityEngine.XR.ARFoundation
 
             None,
         }
+        
 
         [SerializeField]
         [Tooltip("Whether to draw all the feature points or only the ones from the current frame.")]
@@ -57,7 +60,12 @@ namespace UnityEngine.XR.ARFoundation
 
         private void Start()
         {
+            // TODO investigate further to get default mode able to set in inspector
+            Debug.Log("Point cloud visuliser Start mode is " + mode);
             mode = Mode.CurrentFrame;
+            Debug.Log("Point cloud visulizer Start mode after changing is "+ mode);
+
+
         }
         void RenderPoints()
         {
