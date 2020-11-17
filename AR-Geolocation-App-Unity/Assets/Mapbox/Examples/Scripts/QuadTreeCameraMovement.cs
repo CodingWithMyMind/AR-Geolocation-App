@@ -17,10 +17,14 @@
 		float _zoomSpeed = 0.25f;
 
 		[SerializeField]
+		Transform newCameraParent;
+
+		[SerializeField]
 		public Camera _referenceCamera;
 
 		[SerializeField]
 		AbstractMap _mapManager;
+
 
 		[SerializeField]
 		bool _useDegreeMethod;
@@ -32,6 +36,8 @@
 		private bool _isInitialized = false;
 		private Plane _groundPlane = new Plane(Vector3.up, 0);
 		private bool _dragStartedOnUI = false;
+
+		public bool cameraDetached = false;
 
 		void Awake()
 		{
@@ -51,12 +57,30 @@
 			if (Input.GetMouseButtonDown(0) && EventSystem.current.IsPointerOverGameObject())
 			{
 				_dragStartedOnUI = true;
+
+                if (!cameraDetached)
+                {
+					DetachFromPlayer();
+					cameraDetached = true;
+				}
+				
 			}
 
 			if (Input.GetMouseButtonUp(0))
 			{
 				_dragStartedOnUI = false;
 			}
+		}
+
+		public void FollowPlayer()
+        {
+			cameraDetached = false;
+			_referenceCamera.transform.parent = Player.Instance.transform;
+		}
+
+		public void DetachFromPlayer()
+        {
+			_referenceCamera.transform.parent = newCameraParent;
 		}
 
 
