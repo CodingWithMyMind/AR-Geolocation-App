@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
 
     public string CurrentAtPOI;
 
+    
+
     public static Player Instance
     {
         get
@@ -29,7 +31,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurrentAtPOI = "Not Entered POI yet";
+        CurrentAtPOI = "POI1";
         Instance = this;
         UIButtonToEnterAR = GameObject.Find("EnterARButton");
     }

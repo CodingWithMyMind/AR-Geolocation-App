@@ -26,13 +26,18 @@ public class ARManagerScript : MonoBehaviour
 
     public void EnterARScene()
     {
-        Debug.Log("Entering AR Scene");
-        SceneManager.LoadScene("ARScene", LoadSceneMode.Single);
+        string mapToEnter;
+        mapToEnter = "ARScene"+Player.Instance.CurrentAtPOI;
+        Debug.Log(mapToEnter);
+
+        //SceneManager.LoadScene(mapToEnter, LoadSceneMode.Single);
     }
 
     public void EnterMapScene()
     {
-        Debug.Log("Entering AR Scene");
+      
+        
+        Debug.Log("Entering Map Scene");
         SceneManager.LoadScene("MapSceneLight", LoadSceneMode.Single);
     }
 
@@ -50,7 +55,6 @@ public class ARManagerScript : MonoBehaviour
     public void StartARScene()
     {
         OnBoardPanel.SetActive(false);
-        
     }
 
     public void QuitARScene()
