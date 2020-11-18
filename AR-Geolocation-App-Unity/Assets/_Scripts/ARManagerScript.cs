@@ -15,7 +15,10 @@ public class ARManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (OnBoardPanel)
+        {
+            OnBoardPanel.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -34,8 +37,6 @@ public class ARManagerScript : MonoBehaviour
 
     public void EnterMapScene()
     {
-      
-        
         Debug.Log("Entering Map Scene");
         SceneManager.LoadScene("MapSceneLight", LoadSceneMode.Single);
     }
