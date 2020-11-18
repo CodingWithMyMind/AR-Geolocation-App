@@ -20,6 +20,7 @@ public class MapDebug : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UIDebugPanel.SetActive(false);
         UIButtonToEnterAR = GameObject.Find("EnterARButton");
         LocationProviderFactory.Instance.mapManager.OnInitialized += () => _isInitialized = true;
     }
