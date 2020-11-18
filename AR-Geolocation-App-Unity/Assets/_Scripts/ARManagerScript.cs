@@ -65,7 +65,6 @@ public class ARManagerScript : MonoBehaviour
 
     public void DisplayStatus(string Status, int seconds)
     {
-        
         txtM.text = Status;
         TextMessagePanel.SetActive(true);
         Invoke("HideStatus", seconds);

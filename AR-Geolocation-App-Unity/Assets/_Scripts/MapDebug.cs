@@ -22,6 +22,7 @@ public class MapDebug : MonoBehaviour
     {
         UIDebugPanel.SetActive(false);
         UIButtonToEnterAR = GameObject.Find("EnterARButton");
+
         LocationProviderFactory.Instance.mapManager.OnInitialized += () => _isInitialized = true;
     }
 
@@ -36,6 +37,7 @@ public class MapDebug : MonoBehaviour
         bool currentState = UIDebugPanel.activeSelf;
         UIDebugPanel.SetActive(!currentState);
     }
+
 
     public void EnableARMode()
     {
