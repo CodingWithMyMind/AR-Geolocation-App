@@ -1221,7 +1221,7 @@ PrefabInstance:
     - target: {fileID: 6242952555247559521, guid: 30c651ebcbba7af49b27719335cbeac5, type: 3}
       propertyPath: m_PlacementPrefab
       value: 
-      objectReference: {fileID: 4085108242453859580, guid: 710b393273fbc3b4aa39c080df46657f, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6242952555247559521, guid: 30c651ebcbba7af49b27719335cbeac5, type: 3}
       propertyPath: m_InteractionLayerMask.m_Bits
       value: 4294967295
@@ -1636,7 +1636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 103.79999, y: 54.700073}
+  m_AnchoredPosition: {x: 103.80005, y: 54.700073}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1694725722
@@ -1748,7 +1748,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnBoardPanel: {fileID: 0}
-  OnBoardPane2: {fileID: 0}
   TextMessagePanel: {fileID: 0}
   txtM: {fileID: 0}
 --- !u!4 &1775560261
