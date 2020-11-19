@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MapScene.unity
     guid: 461157bb6c5fa67458687e3a2ff1f1aa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/KenARScene.unity
     guid: 1c1dd1b14feef3946a9de7942572fe41
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARScenePOI3(Clone).unity
     guid: df3891bd14ec55f4db6f2b7b820a4a9a
   m_configObjects:

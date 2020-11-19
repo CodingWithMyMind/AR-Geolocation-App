@@ -75,6 +75,13 @@ public class ARManagerScript : MonoBehaviour
         TextMessagePanel.SetActive(false);
     }
 
+    public void EnterSampleScene()
+    {
+        SceneManager.LoadScene("ARScenePOI2(Clone)", LoadSceneMode.Single);
+    }
+
+
+
 
 
 
