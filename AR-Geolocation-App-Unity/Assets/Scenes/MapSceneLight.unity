@@ -4302,12 +4302,16 @@ MonoBehaviour:
   - -37.776392, 144.940480
   - -37.776108, 144.940534
   - -37.776241, 144.940241
+  - -37.800918, 145.163882
+  - -37.801043, 145.163883
   _spawnScale: 20
   _markerPrefab:
   - {fileID: 1936073976716260293, guid: fa6f96487ced6264f95b0fe925740c6a, type: 3}
   - {fileID: 1936073976716260293, guid: 588cebb76da68084f9d5ac4200fed232, type: 3}
   - {fileID: 1936073976716260293, guid: bcf2a1602e3d9b84e8d032148be4aad4, type: 3}
   - {fileID: 1936073976716260293, guid: 588cebb76da68084f9d5ac4200fed232, type: 3}
+  - {fileID: 1936073976716260293, guid: 588cebb76da68084f9d5ac4200fed232, type: 3}
+  - {fileID: 1936073976716260293, guid: bcf2a1602e3d9b84e8d032148be4aad4, type: 3}
 --- !u!114 &1752078100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5488,6 +5492,14 @@ PrefabInstance:
     - target: {fileID: 3893206246050164052, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893206246058761418, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 29912192}
+    - target: {fileID: 3893206246058761418, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3893206246058761419, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_SizeDelta.x

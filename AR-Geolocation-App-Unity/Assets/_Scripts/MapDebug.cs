@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Mapbox.Unity.Location;
+using UnityEngine.SceneManagement;
 
 public class MapDebug : MonoBehaviour
 {
@@ -30,6 +31,11 @@ public class MapDebug : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void EnterARScene(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
     }
 
     public void EnableDebugging()
