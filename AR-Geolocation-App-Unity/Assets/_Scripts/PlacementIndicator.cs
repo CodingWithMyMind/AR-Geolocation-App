@@ -9,8 +9,9 @@ public class PlacementIndicator : MonoBehaviour
 
     private ARRaycastManager rayManager;
     private GameObject visual;
+    
 
-     void Start()
+    void Start()
     {
         // get the component
         rayManager = FindObjectOfType<ARRaycastManager>();
