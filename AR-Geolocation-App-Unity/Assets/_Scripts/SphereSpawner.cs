@@ -44,7 +44,7 @@ public class SphereSpawner : MonoBehaviour
         timer += Time.deltaTime * 1.0f; */
     }
 
-    public void PlaceObject()
+    public void PlaceObjectA()
     {
         GameObject ObjectA = Instantiate(SpawnObject, placementIndicator.transform.position, placementIndicator.transform.rotation);
             Destroy(ObjectA, destroyafterSeconds);
