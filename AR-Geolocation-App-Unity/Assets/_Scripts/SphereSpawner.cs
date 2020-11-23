@@ -52,19 +52,19 @@ public class SphereSpawner : MonoBehaviour
     public void PlaceObjectA()
     {
          Object[0] = Instantiate(SpawnObject[0], placementIndicator.transform.position, placementIndicator.transform.rotation);
-            //Destroy(Object[0], destroyafterSeconds);
+            Destroy(Object[0], destroyafterSeconds);
         }
 
     public void PlaceObjectB()
     {
          Object[1] = Instantiate(SpawnObject[1], placementIndicator.transform.position, placementIndicator.transform.rotation);
-        //Destroy(Object[1], destroyafterSeconds);
+        Destroy(Object[1], destroyafterSeconds);
     }
 
     public void PlaceObjectC()
     {
          Object[2] = Instantiate(SpawnObject[2], placementIndicator.transform.position, placementIndicator.transform.rotation);
-        //Destroy(Object[2], destroyafterSeconds);
+        Destroy(Object[2], destroyafterSeconds);
     }
 
 
@@ -73,6 +73,7 @@ public class SphereSpawner : MonoBehaviour
         Destroy(Object[0]);
         Destroy(Object[1]);
         Destroy(Object[2]);
+        
     }
 
 
