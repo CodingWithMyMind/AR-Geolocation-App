@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 186149193}
   - component: {fileID: 186149192}
   m_Layer: 5
-  m_Name: BtnObjA
+  m_Name: ObjA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1368417716}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlaceObjectA
         m_Mode: 1
@@ -1525,7 +1525,7 @@ GameObject:
   - component: {fileID: 1040009755}
   - component: {fileID: 1040009754}
   m_Layer: 5
-  m_Name: ReturnToMapButton
+  m_Name: ReturnToMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1597,7 +1597,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1775560260}
         m_TargetAssemblyTypeName: ARManagerScript, Assembly-CSharp
-        m_MethodName: EnterMapScene
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1605,6 +1605,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1368417716}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: buttonOnClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ReturnToMap
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1040009755
@@ -2078,7 +2090,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1368417716}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlaceObjectC
         m_Mode: 1
@@ -2792,7 +2804,7 @@ GameObject:
   - component: {fileID: 1368417715}
   - component: {fileID: 1368417716}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ButtonControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2913,7 +2925,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1368417710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4243d87ee52e33a47a7d20ce5e33c357, type: 3}
+  m_Script: {fileID: 11500000, guid: 19a62265a164df040be0f4317c8e5925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bgm: {fileID: 820845111}
@@ -2921,6 +2933,7 @@ MonoBehaviour:
   audioSource2: {fileID: 2056458194}
   audioSource3: {fileID: 2065032907}
   OpenSFX: {fileID: 1696895883}
+  animationSpeed: 0.1
 --- !u!1 &1487401175
 GameObject:
   m_ObjectHideFlags: 0
@@ -3592,7 +3605,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1368417716}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlaceObjectB
         m_Mode: 1
