@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         OpenSFX.Play();
-        Invoke("BGM", 2);
+        Invoke("BGM", 1);
         //btnObjATransform = GameObject.Find("ObjA").GetComponent<Transform>();
         btnReturnToMapTransform = GameObject.Find("ReturnToMap").GetComponent<Transform>();
         btnPlaceObjectTransform = GameObject.Find("PlaceObject").GetComponent<Transform>();
@@ -77,6 +77,11 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    public void buttonSound()
+    {
+        ButtonSound.Play();
+
+    }
     public void buttonOnClick(string buttonName)
     {
         ButtonSound.Play();
@@ -115,6 +120,8 @@ public class AudioManager : MonoBehaviour
         SidePanel.SetActive(true);
         PlaceObject.SetActive(false);
     }
+
+    
 
 
 
