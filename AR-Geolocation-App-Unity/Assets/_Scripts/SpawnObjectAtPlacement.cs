@@ -16,7 +16,7 @@ public class SpawnObjectAtPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("something");
+        
     }
     private bool IsPointerOverUIObject()
     {
