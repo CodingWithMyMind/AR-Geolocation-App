@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public AudioSource bgm;
     public AudioSource audioSource;
     public AudioSource audioSource2;
     public AudioSource audioSource3;
@@ -12,6 +13,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         OpenSFX.Play();
+        Invoke("BGM", 2);
     }
 
     // Update is called once per frame
@@ -33,6 +35,11 @@ public class AudioManager : MonoBehaviour
     public void PlaceObjectC()
     {
         audioSource3.Play();
+    }
+
+    public void BGM()
+    {
+        bgm.Play();
     }
 
   
