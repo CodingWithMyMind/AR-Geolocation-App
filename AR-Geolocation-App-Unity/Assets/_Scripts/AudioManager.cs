@@ -7,10 +7,11 @@ public class AudioManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioSource audioSource2;
     public AudioSource audioSource3;
+    public AudioSource OpenSFX;
     // Start is called before the first frame update
     void Start()
     {
-        
+        OpenSFX.Play();
     }
 
     // Update is called once per frame
