@@ -847,7 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5a377a833778a4083f9f70a8d05057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placedPrefab: {fileID: 4085108242453859580, guid: 47d56c184694fa04ab84125bd56449d2, type: 3}
+  placedPrefab: {fileID: 4085108242453859580, guid: 79aacf9a577c515489aab7bacacbb061, type: 3}
   arPlaneManager: {fileID: 249921548}
 --- !u!114 &249921551 stripped
 MonoBehaviour:
@@ -2272,7 +2272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04a86d08f30dfa4b822e14b270fe66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnObject: {fileID: 3833999808925355038, guid: 5a950549d7c65434e95c0c922dd7a6e2, type: 3}
+  SpawnObject:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Object: []
 --- !u!4 &1203264697
 Transform:
   m_ObjectHideFlags: 0
@@ -2921,6 +2925,10 @@ PrefabInstance:
     - target: {fileID: 2899576277654282648, guid: 76335271ab155414489c4584939b588d, type: 3}
       propertyPath: m_Name
       value: Example 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899576277654282648, guid: 76335271ab155414489c4584939b588d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2899576277654282650, guid: 76335271ab155414489c4584939b588d, type: 3}
       propertyPath: m_RootOrder
