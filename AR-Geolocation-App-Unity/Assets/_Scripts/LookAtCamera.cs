@@ -13,7 +13,7 @@ public class LookAtCamera : MonoBehaviour
         camera = Camera.main.transform;
         if (shouldShakeForAttention)
         {
-            InvokeRepeating("ShakeUI", 2.0f, 5.0f);
+            InvokeRepeating("ShakeUI", Random.Range(2.0f,3.0f), 6.0f);
         }
     }
 
