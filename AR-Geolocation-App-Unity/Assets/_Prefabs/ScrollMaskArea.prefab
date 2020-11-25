@@ -257,7 +257,6 @@ GameObject:
   - component: {fileID: 2053275872344745581}
   - component: {fileID: 2053275872344745578}
   - component: {fileID: 2053275872344745579}
-  - component: {fileID: 2053275872344745580}
   - component: {fileID: 2633276660493461398}
   m_Layer: 5
   m_Name: Vertical Scroll Snap
@@ -354,19 +353,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2053275872344745580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053275872344745574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61fe0f6272fa94d4eb3dafc6aecd50ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitByUser: 0
 --- !u!114 &2633276660493461398
 MonoBehaviour:
   m_ObjectHideFlags: 0
