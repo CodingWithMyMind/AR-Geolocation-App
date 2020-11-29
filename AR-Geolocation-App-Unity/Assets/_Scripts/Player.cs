@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 
     public bool AtPOI;
 
-    public string CurrentAtPOI;
+    public string CurrentPOI;
 
     
 
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurrentAtPOI = "POI1";
+        CurrentPOI = "POI1";
         Instance = this;
         UIButtonToEnterAR = GameObject.Find("EnterARButton");
     }
@@ -44,18 +44,17 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "POI")
+
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "POI")
         {
             UIButtonToEnterAR.SetActive(true);
             AtPOI = true;
             Debug.Log("Player enter POI");
-            CurrentAtPOI = other.gameObject.name;
+            CurrentPOI = other.gameObject.GetComponent<POIObject>().ARSceneToEnter;
         }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        CurrentAtPOI = other.gameObject.name;
-        UIButtonToEnterAR.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
@@ -65,7 +64,7 @@ public class Player : MonoBehaviour
             AtPOI = false;
             UIButtonToEnterAR.SetActive(false);
             Debug.Log("Player exit POI");
-            CurrentAtPOI = "Exited" + other.gameObject.name;
+            CurrentPOI = "Exited" + other.gameObject.name;
         }
     }
 }

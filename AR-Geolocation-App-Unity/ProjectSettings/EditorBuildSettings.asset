@@ -18,13 +18,13 @@ EditorBuildSettings:
     path: Assets/Mapbox/Examples/0_PrefabScenes/Location-basedGame.unity
     guid: 42f6aa7ce7a604f16ade319663f46ceb
   - enabled: 1
-    path: Assets/Scenes/ARScenePOI1(Clone).unity
+    path: Assets/_Scenes/ARScene1.unity
     guid: 7dda0debb3775cb47adf67f8749047d0
   - enabled: 1
-    path: Assets/Scenes/ARScenePOI2(Clone).unity
+    path: Assets/_Scenes/ARScene2.unity
     guid: e1738b8a40ca54a4fb8f2906df112309
   - enabled: 1
-    path: Assets/Scenes/MapSceneLight.unity
+    path: Assets/_Scenes/MapSceneLight.unity
     guid: 2eb266faa568cc748b6e0cd3e2ffd596
   - enabled: 0
     path: Assets/Scenes/MapSceneExperimental.unity
@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/KenARScene.unity
     guid: 1c1dd1b14feef3946a9de7942572fe41
   - enabled: 0
-    path: Assets/Scenes/ARScenePOI3(Clone).unity
+    path: Assets/_Scenes/ARScenePOI3(Clone).unity
     guid: df3891bd14ec55f4db6f2b7b820a4a9a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b06ffcad3eed57541892c32d236eee41, type: 2}
