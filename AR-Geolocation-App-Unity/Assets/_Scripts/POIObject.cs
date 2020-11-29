@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class POIObject : MonoBehaviour
 {
-    public string ARSceneToEnter;
+    public string ARSceneToEnter = null;
 
     public string locationString;
     public string message;
@@ -29,7 +29,10 @@ public class POIObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (ARSceneToEnter == null)
+        {
+            ARSceneToEnter = "ARcene1";
+        }
 
         //DisplayStatus("Hello World");
     }
