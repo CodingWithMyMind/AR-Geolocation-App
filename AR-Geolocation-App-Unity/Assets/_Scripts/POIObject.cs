@@ -9,6 +9,9 @@ public class POIObject : MonoBehaviour
 {
     public string ARSceneToEnter = null;
 
+    public string POIMapName = "POI";
+   private Text POIMapNameText;
+
     public string locationString;
     public string message;
     public bool collected;
@@ -21,7 +24,9 @@ public class POIObject : MonoBehaviour
 
     private void OnEnable()
     {
-        
+
+        POIMapNameText = this.gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Text>(); 
+       // POIMapNameText = transform.Find("Text").gameObject.
         txtStatus = GameObject.Find("txtStatus");
         StatusPanel = GameObject.Find("StatusPanel");
 
@@ -32,6 +37,10 @@ public class POIObject : MonoBehaviour
         if (ARSceneToEnter == null)
         {
             ARSceneToEnter = "ARcene1";
+        }
+        if (POIMapNameText)
+        {
+            POIMapNameText.text = POIMapName;
         }
 
         //DisplayStatus("Hello World");

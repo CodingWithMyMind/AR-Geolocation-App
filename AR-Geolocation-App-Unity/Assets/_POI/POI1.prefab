@@ -49,6 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ARSceneToEnter: ARScene1
+  POIMapName: Ben Green
+  POIMapNameText: {fileID: 3143378327286079574}
   locationString: -37.776240, 144.940509
   message: This is Bens POI
   collected: 0
@@ -302,8 +304,8 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 300
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
+    m_BestFit: 1
+    m_MinSize: 50
     m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0

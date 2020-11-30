@@ -4067,7 +4067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 1752078098}
   _spawnScale: 10
-  _markerPrefab:
+  POIPrefabs:
   - {fileID: 1936073976716260293, guid: fa6f96487ced6264f95b0fe925740c6a, type: 3}
   - {fileID: 1936073976716260293, guid: 588cebb76da68084f9d5ac4200fed232, type: 3}
   - {fileID: 1936073976716260293, guid: bcf2a1602e3d9b84e8d032148be4aad4, type: 3}

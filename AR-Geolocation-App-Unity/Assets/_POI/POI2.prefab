@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ARSceneToEnter: ArScene1
+  POIMapName: Blue POI
+  POIMapNameText: {fileID: 950438042130987880}
   locationString: -37.776238, 144.940281
   message: Bens Room POI
   collected: 0
