@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Mapbox/Examples/0_PrefabScenes/Location-basedGame.unity
     guid: 42f6aa7ce7a604f16ade319663f46ceb
   - enabled: 1
+    path: Assets/_Scenes/ARScene1b.unity
+    guid: a1c2015db5fcaa44499a50f19d6b7384
+  - enabled: 1
     path: Assets/_Scenes/ARScene1.unity
     guid: 7dda0debb3775cb47adf67f8749047d0
   - enabled: 1
@@ -32,6 +35,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/KenARScene.unity
     guid: 1c1dd1b14feef3946a9de7942572fe41
+  - enabled: 1
+    path: Assets/_Scenes/ARScene1c.unity
+    guid: e21904f67be10474e837521800b976ca
   - enabled: 0
     path: Assets/_Scenes/ARScenePOI3(Clone).unity
     guid: df3891bd14ec55f4db6f2b7b820a4a9a
