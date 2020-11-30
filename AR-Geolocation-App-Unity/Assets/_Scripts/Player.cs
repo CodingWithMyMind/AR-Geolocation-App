@@ -53,7 +53,8 @@ public class Player : MonoBehaviour
             UIButtonToEnterAR.SetActive(true);
             AtPOI = true;
             Debug.Log("Player enter POI");
-            CurrentPOI = other.gameObject.GetComponent<POIObject>().ARSceneToEnter;
+            
+            CurrentPOI = other.gameObject.GetComponentInParent<POIObject>().ARSceneToEnter;
         }
     }
 
