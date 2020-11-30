@@ -13,6 +13,11 @@ public class Player : MonoBehaviour
 
     public string CurrentPOI;
 
+    private GameObject map;
+
+    private CapsuleCollider playerCollider;
+    private float startColliderRadius;
+
     
 
     public static Player Instance
@@ -34,12 +39,16 @@ public class Player : MonoBehaviour
         CurrentPOI = "POI1";
         Instance = this;
         UIButtonToEnterAR = GameObject.Find("EnterARButton");
+
+        playerCollider = this.gameObject.GetComponent<CapsuleCollider>();
+        startColliderRadius = playerCollider.radius;
+        map = GameObject.Find("Map");
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        playerCollider.radius = map.transform.localScale.x * startColliderRadius;
     }
 
     private void OnTriggerEnter(Collider other)
