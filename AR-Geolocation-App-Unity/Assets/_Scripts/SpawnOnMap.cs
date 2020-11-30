@@ -40,7 +40,7 @@
 				var instance = Instantiate(POIPrefabs[i]);
 				
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
-				instance.transform.localScale = new Vector3(_spawnScale, instance.transform.localScale.y, _spawnScale);
+				//instance.transform.localScale = new Vector3(_spawnScale, instance.transform.localScale.y, _spawnScale);
 				_spawnedObjects.Add(instance);
 			}
 		}
@@ -53,7 +53,7 @@
 				var spawnedObject = _spawnedObjects[i];
 				var location = _locations[i];
 				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
-				spawnedObject.transform.localScale = new Vector3(gameObject.transform.localScale.x * _spawnScale, gameObject.transform.localScale.y, gameObject.transform.localScale.z * _spawnScale);
+				spawnedObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
 			}
 		}
 	}

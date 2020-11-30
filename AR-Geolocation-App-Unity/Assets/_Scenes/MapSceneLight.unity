@@ -2574,27 +2574,35 @@ PrefabInstance:
       objectReference: {fileID: 4900000, guid: 5e6bb7224cef35c4788a4817b1c9778d, type: 3}
     - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _updateInterval
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
-      propertyPath: _latitudeLongitude.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: _latitudeLongitude.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _latitudeLongitude.Array.data[0]
-      value: -37.7761999, 144.9403508132
+      value: '-38.148564, 144.361620 '
       objectReference: {fileID: 0}
     - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _latitudeLongitude.Array.data[1]
-      value: -37.776563, 144.940446
+      value: '-38.148383, 144.361116 '
       objectReference: {fileID: 0}
     - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _latitudeLongitude.Array.data[2]
-      value: -37.776082, 144.940541
+      value: '-38.148249, 144.360665 '
       objectReference: {fileID: 0}
     - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _latitudeLongitude.Array.data[3]
+      value: -37.7761999, 144.9403508132
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: _latitudeLongitude.Array.data[4]
       value: -37.776563, 144.940446
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: _latitudeLongitude.Array.data[5]
+      value: -37.776082, 144.940541
       objectReference: {fileID: 0}
     - target: {fileID: 114668955501623132, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _rotateZ
@@ -4068,6 +4076,9 @@ MonoBehaviour:
   _map: {fileID: 1752078098}
   _spawnScale: 10
   POIPrefabs:
+  - {fileID: 1936073976716260293, guid: 8b9c10682e1060e44812b1498c42d02a, type: 3}
+  - {fileID: 1936073976716260293, guid: b364a61370fe96146a875194d8f11b4a, type: 3}
+  - {fileID: 1936073976716260293, guid: 75b840f71a3f1604b8a65b20b4c27bd2, type: 3}
   - {fileID: 1936073976716260293, guid: fa6f96487ced6264f95b0fe925740c6a, type: 3}
   - {fileID: 1936073976716260293, guid: 588cebb76da68084f9d5ac4200fed232, type: 3}
   - {fileID: 1936073976716260293, guid: bcf2a1602e3d9b84e8d032148be4aad4, type: 3}
