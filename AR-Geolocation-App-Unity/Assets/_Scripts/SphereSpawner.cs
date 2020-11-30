@@ -25,6 +25,7 @@ public class SphereSpawner : MonoBehaviour
     {
         placementIndicator = FindObjectOfType<PlacementIndicator>();
         
+
     }
 
     // Update is called once per frame
@@ -51,19 +52,19 @@ public class SphereSpawner : MonoBehaviour
 
     public void PlaceObjectA()
     {
-         Object[0] = Instantiate(SpawnObject[0], placementIndicator.transform.position, placementIndicator.transform.rotation);
+         Object[0] = Instantiate(SpawnObject[0], placementIndicator.transform.position, placementIndicator.transform.rotation * Quaternion.Euler(270f, 180f, -90f));
             //Destroy(Object[0], destroyafterSeconds);
         }
 
     public void PlaceObjectB()
     {
-         Object[1] = Instantiate(SpawnObject[1], placementIndicator.transform.position, placementIndicator.transform.rotation);
+         Object[1] = Instantiate(SpawnObject[1], placementIndicator.transform.position, placementIndicator.transform.rotation * Quaternion.Euler(270f, 180f, 0f));
         //Destroy(Object[1], destroyafterSeconds);
     }
 
     public void PlaceObjectC()
     {
-         Object[2] = Instantiate(SpawnObject[2], placementIndicator.transform.position, placementIndicator.transform.rotation);
+         Object[2] = Instantiate(SpawnObject[2], placementIndicator.transform.position, placementIndicator.transform.rotation * Quaternion.Euler(0f, 180f, 0f));
         //Destroy(Object[2], destroyafterSeconds);
     }
 
