@@ -7,7 +7,12 @@ using UnityEngine.UI;
 
 public class POIObject : MonoBehaviour
 {
+    public string ARSceneToEnter = null;
 
+    public string POIMapName = "POI";
+   private Text POIMapNameText;
+
+    public string locationString;
     public string message;
     public bool collected;
 
@@ -19,7 +24,9 @@ public class POIObject : MonoBehaviour
 
     private void OnEnable()
     {
-        
+
+        POIMapNameText = this.gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Text>(); 
+       // POIMapNameText = transform.Find("Text").gameObject.
         txtStatus = GameObject.Find("txtStatus");
         StatusPanel = GameObject.Find("StatusPanel");
 
@@ -27,9 +34,16 @@ public class POIObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (ARSceneToEnter == null)
+        {
+            ARSceneToEnter = "ARcene1";
+        }
+        if (POIMapNameText)
+        {
+            POIMapNameText.text = POIMapName;
+        }
 
-
-        DisplayStatus("Hello World");
+        //DisplayStatus("Hello World");
     }
 
     // Update is called once per frame
@@ -43,18 +57,7 @@ public class POIObject : MonoBehaviour
         // Enter POI
         if(other.tag == "Player")
         {
-            //DisplayStatus("Hello World");
-     
-            StatusPanel.SetActive(true);
             DisplayStatus(message);
-        }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            
         }
     }
 
@@ -63,12 +66,7 @@ public class POIObject : MonoBehaviour
         // Exit POI
         if (other.tag == "Player")
         {
-            //Debug.Log("player intersect with poi with message :" + message);
-       
-
-
-            StatusPanel.SetActive(false);
-            //DisplayStatus("123");
+            HideStatus();
         }
     }
 
@@ -76,7 +74,7 @@ public class POIObject : MonoBehaviour
     {
         StatusPanel.SetActive(true);
         txtStatus.GetComponent<Text>().text = msg;
-        Invoke("HideStatus", 2);
+        //Invoke("HideStatus", 2);
     }
     
     public void HideStatus()

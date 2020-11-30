@@ -12,29 +12,33 @@
 		[SerializeField]
 		AbstractMap _map;
 
-		[SerializeField]
-		[Geocode]
-		string[] _locationStrings;
+	
 		Vector2d[] _locations;
 
 		[SerializeField]
 		float _spawnScale = 100f;
 
 		[SerializeField]
-		GameObject[] _markerPrefab;
+		GameObject[] POIPrefabs;
 
 		List<GameObject> _spawnedObjects;
 
 		void Start()
 		{
-			_locations = new Vector2d[_locationStrings.Length];
+			_locations = new Vector2d[POIPrefabs.Length];
 			_spawnedObjects = new List<GameObject>();
-			for (int i = 0; i < _locationStrings.Length; i++)
+
+			for (int i = 0; i < POIPrefabs.Length; i++)
 			{
-				var locationString = _locationStrings[i];
+				//var locationString = _locationStrings[i];
+
+				var locationString = POIPrefabs[i].GetComponent<POIObject>().locationString;
+
 				_locations[i] = Conversions.StringToLatLon(locationString);
-				var instance = Instantiate(_markerPrefab[i]);
-				//instance.name = "POI" + (i+1) ;
+
+
+				var instance = Instantiate(POIPrefabs[i]);
+				
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 				instance.transform.localScale = new Vector3(_spawnScale, instance.transform.localScale.y, _spawnScale);
 				_spawnedObjects.Add(instance);
