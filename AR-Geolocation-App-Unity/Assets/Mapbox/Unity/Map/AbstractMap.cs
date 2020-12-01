@@ -217,6 +217,10 @@ namespace Mapbox.Unity.Map
 
 		public void SetZoom(float zoom)
 		{
+            if (zoom <= 8 )
+            {
+				zoom = 8;
+            }
 			Options.locationOptions.zoom = zoom;
 		}
 
@@ -332,6 +336,8 @@ namespace Mapbox.Unity.Map
 			{
 				TileProvider.UpdateTileProvider();
 			}
+
+
 		}
 
 		public virtual void UpdateMap()
