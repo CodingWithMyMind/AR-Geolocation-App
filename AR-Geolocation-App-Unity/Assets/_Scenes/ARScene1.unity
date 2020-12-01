@@ -957,7 +957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6242952556315286443, guid: 30c651ebcbba7af49b27719335cbeac5, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6242952556315286446, guid: 30c651ebcbba7af49b27719335cbeac5, type: 3}
       propertyPath: m_InteractionLayerMask.m_Bits

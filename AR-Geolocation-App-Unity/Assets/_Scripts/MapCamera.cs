@@ -12,12 +12,9 @@ public class MapCamera : MonoBehaviour
 
 	void LateUpdate()
 	{
-
 		Quaternion desiredRotation = transform.rotation;
 
 		DetectTouchMovement.Calculate();
-
-
 
 		if (Mathf.Abs(DetectTouchMovement.turnAngleDelta) > 0)
 		{ // rotate
@@ -25,7 +22,6 @@ public class MapCamera : MonoBehaviour
 			rotationDeg.z = -DetectTouchMovement.turnAngleDelta;
 			desiredRotation *= Quaternion.Euler(rotationDeg);
 		}
-
 
 		// not so sure those will work:
 		transform.rotation = desiredRotation;
