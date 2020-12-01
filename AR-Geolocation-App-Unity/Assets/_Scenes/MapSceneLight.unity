@@ -1341,8 +1341,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1936073976716260293, guid: a2bb762704ad2b54398f6b4129d0d7a2, type: 3}
     - target: {fileID: 1752078100, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: _panSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752078100, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752078100, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+      propertyPath: _zoomSpeed
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1752078100, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: otherTransform
@@ -1430,7 +1438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _imagery._layerProperty.rasterOptions.useRetina
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _vectorData._layerProperty.sourceOptions.isActive
