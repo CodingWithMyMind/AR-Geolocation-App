@@ -20,8 +20,8 @@ public class AudioManager : MonoBehaviour
     private Transform btnReturnToMapTransform;
     private Transform btnPlaceObjectTransform;
     private Transform btnResetObjectTransform;
-    //private Transform btnObjATransform;
-    //private Transform btnObjATransform;
+    private Transform btnRmenuTransform;
+
     private float animationDelay = 0.1f;
     // Start is called before the first frame update
     void Start()
@@ -32,6 +32,7 @@ public class AudioManager : MonoBehaviour
         btnReturnToMapTransform = GameObject.Find("ReturnToMap").GetComponent<Transform>();
         btnPlaceObjectTransform = GameObject.Find("PlaceObject").GetComponent<Transform>();
         btnResetObjectTransform = GameObject.Find("ResetObject").GetComponent<Transform>();
+        btnRmenuTransform = GameObject.Find("ReturnToMenu").GetComponent<Transform>();
         
     }
 
@@ -72,6 +73,7 @@ public class AudioManager : MonoBehaviour
        btnReturnToMapTransform.localScale = new Vector3(1, 1, 1);
         btnPlaceObjectTransform.localScale = new Vector3(1, 1, 1);
         btnResetObjectTransform.localScale = new Vector3(1, 1, 1);
+        btnRmenuTransform.localScale = new Vector3(1, 1, 1);
         //btnObjATransform.localScale = new Vector3(1, 1, 1);
 
 
@@ -99,6 +101,10 @@ public class AudioManager : MonoBehaviour
         case "ResetS":
                 animation(btnResetObjectTransform);             
                 break;
+            case "ReturnMenu":
+                BacktoMenu();
+                animation(btnRmenuTransform);
+                break;
 
 
 
@@ -119,6 +125,11 @@ public class AudioManager : MonoBehaviour
     {
         SidePanel.SetActive(true);
         PlaceObject.SetActive(false);
+    }
+
+    void BacktoMenu()
+    {
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 
     
