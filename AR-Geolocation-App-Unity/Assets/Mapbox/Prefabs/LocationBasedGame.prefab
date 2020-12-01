@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8030624}
+  - component: {fileID: 3553463811119891211}
+  - component: {fileID: 414266458334752642}
   - component: {fileID: 8030623}
   - component: {fileID: 8030622}
   - component: {fileID: 8030621}
@@ -33,6 +35,30 @@ Transform:
   m_Father: {fileID: 4886150424162858}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 80, y: 0, z: 0}
+--- !u!114 &3553463811119891211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8030620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d600cbf1fa2d6440b250bfa101cac90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &414266458334752642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8030620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76040085381401c4bbb3b638559064c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &8030623
 Camera:
   m_ObjectHideFlags: 0
@@ -508,9 +534,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4310658642812482}
   - component: {fileID: 114105500206378512}
+  - component: {fileID: 1752078100}
   - component: {fileID: 114086566548189782}
   - component: {fileID: 1752078099}
-  - component: {fileID: 1752078100}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -926,6 +952,26 @@ MonoBehaviour:
   _tileProvider: {fileID: 0}
   _previewOptions:
     isPreviewEnabled: 0
+--- !u!114 &1752078100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094528686802348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c699b8e1864b4b248acb7a04ede9480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panSpeed: 1
+  _zoomSpeed: 0.25
+  otherTransform: {fileID: 0}
+  newCameraParent: {fileID: 4886150424162858}
+  _referenceCamera: {fileID: 8030623}
+  _mapManager: {fileID: 114105500206378512}
+  _useDegreeMethod: 0
+  cameraAtachedToPlayer: 1
 --- !u!114 &114086566548189782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,26 +1003,6 @@ MonoBehaviour:
   - {fileID: 1936073976716260293, guid: 889a0b2a20b61d048bf796b0c080d6ed, type: 3}
   - {fileID: 1936073976716260293, guid: b364a61370fe96146a875194d8f11b4a, type: 3}
   - {fileID: 1936073976716260293, guid: 93078b6f4a100e54cb45cee187ebdaa0, type: 3}
---- !u!114 &1752078100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094528686802348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c699b8e1864b4b248acb7a04ede9480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panSpeed: 1
-  _zoomSpeed: 0.25
-  otherTransform: {fileID: 0}
-  newCameraParent: {fileID: 4886150424162858}
-  _referenceCamera: {fileID: 8030623}
-  _mapManager: {fileID: 114105500206378512}
-  _useDegreeMethod: 0
-  cameraAtachedToPlayer: 1
 --- !u!1 &1150654482131460
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,10 @@
 
 	public class QuadTreeCameraMovement : MonoBehaviour
 	{
+
+
+
+
 		[SerializeField]
 		[Range(1, 20)]
 		public float _panSpeed = 1.0f;
@@ -43,6 +47,8 @@
 
 		public bool cameraAtachedToPlayer = true;
 
+
+
 		void Awake()
 		{
 			if (null == _referenceCamera)
@@ -54,6 +60,7 @@
 			{
 				_isInitialized = true;
 			};
+			
 		}
 
 		public void Update()
@@ -112,6 +119,9 @@
 			_referenceCamera.transform.localPosition = new Vector3(0, 100, 0);
 			//_referenceCamera.transform.parent = newCameraParent;
 		}
+
+		
+		
 
 
 		private void LateUpdate()
