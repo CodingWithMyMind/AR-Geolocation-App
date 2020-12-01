@@ -87,8 +87,14 @@
 			Vector3 defaultRotation = new Vector3(80, 0, 0);
 
 			_referenceCamera.transform.SetParent(Player.Instance.transform);
-			_referenceCamera.transform.localPosition = vec;
-			_referenceCamera.transform.localEulerAngles = defaultRotation;
+			//_referenceCamera.transform.localPosition = vec;
+
+			
+
+			_mapManager.SetZoom(18);
+			_mapManager.gameObject.transform.localScale= Vector3.one;
+			_mapManager.TileProvider.UpdateTileProvider();
+			//_referenceCamera.transform.localEulerAngles = defaultRotation;
 			//_referenceCamera.transform.parent = Player.Instance.transform;
 		}
 
