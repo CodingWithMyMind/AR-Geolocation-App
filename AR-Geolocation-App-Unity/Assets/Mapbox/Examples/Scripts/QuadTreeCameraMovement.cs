@@ -1,5 +1,6 @@
 ﻿namespace Mapbox.Examples
 {
+	using Mapbox.Unity.Location;
 	using Mapbox.Unity.Map;
 	using Mapbox.Unity.Utilities;
 	using Mapbox.Utils;
@@ -79,33 +80,36 @@
 
 		public void FollowPlayer()
         {
-			Debug.Log("Camera attached to player");
-			cameraAtachedToPlayer = true;
-			// position for camera
-			Vector3 vec = new Vector3(0, 100, 0);
-			// roation for camera
-			Vector3 defaultRotation = new Vector3(80, 0, 0);
-
-			_referenceCamera.transform.SetParent(Player.Instance.transform);
-			//_referenceCamera.transform.localPosition = vec;
-
+			
 			
 
+		
+			// get location provider of player
+			ILocationProvider _locationProvider = LocationProviderFactory.Instance.DefaultLocationProvider;
+
+			// set the centre of the map to be the players current location
+			_mapManager.SetCenterLatitudeLongitude(_locationProvider.CurrentLocation.LatitudeLongitude);
+
 			_mapManager.SetZoom(18);
-			_mapManager.gameObject.transform.localScale= Vector3.one;
-			_mapManager.TileProvider.UpdateTileProvider();
+
+			_mapManager.UpdateMap();
+
+			Debug.Log("Map centred to players location");
 			//_referenceCamera.transform.localEulerAngles = defaultRotation;
-			//_referenceCamera.transform.parent = Player.Instance.transform;
+			_referenceCamera.transform.parent = Player.Instance.transform;
+			_referenceCamera.transform.localPosition = new Vector3(0, 100, 0);
+			cameraAtachedToPlayer = true;
 		}
 
 		public void DetachFromPlayer()
         {
+			
 			Debug.Log("Camera detached from player");
 			cameraAtachedToPlayer = false;
 			_referenceCamera.transform.SetParent(otherTransform);
 
 			_referenceCamera.transform.SetParent(newCameraParent);
-
+			_referenceCamera.transform.localPosition = new Vector3(0, 100, 0);
 			//_referenceCamera.transform.parent = newCameraParent;
 		}
 
