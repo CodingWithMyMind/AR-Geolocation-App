@@ -51,7 +51,7 @@
 			}
 		}
 
-		private void Update()
+		private void LateUpdate()
 		{
 			int count = _spawnedObjects.Count;
 			for (int i = 0; i < count; i++)
