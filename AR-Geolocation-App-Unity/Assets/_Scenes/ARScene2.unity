@@ -431,8 +431,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: acd49366e4474b449968c092b92bab0b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -569,8 +569,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: acd49366e4474b449968c092b92bab0b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1604,8 +1604,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: acd49366e4474b449968c092b92bab0b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1737,8 +1737,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: acd49366e4474b449968c092b92bab0b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2020,8 +2020,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: acd49366e4474b449968c092b92bab0b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2291,8 +2291,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: acd49366e4474b449968c092b92bab0b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3504,8 +3504,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: acd49366e4474b449968c092b92bab0b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3992,8 +3992,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: acd49366e4474b449968c092b92bab0b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5208,6 +5208,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1224536750}
     m_Modifications:
+    - target: {fileID: 1365843302677731744, guid: a779badb4519b5d4288e2dce63778ddd, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9356283
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365843302677731744, guid: a779badb4519b5d4288e2dce63778ddd, type: 3}
+      propertyPath: m_Size.y
+      value: 2.716097
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365843302677731744, guid: a779badb4519b5d4288e2dce63778ddd, type: 3}
+      propertyPath: m_Size.z
+      value: 0.86291796
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365843302677731744, guid: a779badb4519b5d4288e2dce63778ddd, type: 3}
+      propertyPath: m_Center.x
+      value: -1.6842731
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365843302677731744, guid: a779badb4519b5d4288e2dce63778ddd, type: 3}
+      propertyPath: m_Center.y
+      value: 1.2979956
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365843302677731744, guid: a779badb4519b5d4288e2dce63778ddd, type: 3}
+      propertyPath: m_Center.z
+      value: 3.3764617
+      objectReference: {fileID: 0}
     - target: {fileID: 1365843302677731804, guid: a779badb4519b5d4288e2dce63778ddd, type: 3}
       propertyPath: m_RootOrder
       value: 1
