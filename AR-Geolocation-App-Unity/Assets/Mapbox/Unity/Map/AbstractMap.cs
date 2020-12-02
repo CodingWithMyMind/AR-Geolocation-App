@@ -25,7 +25,15 @@ namespace Mapbox.Unity.Map
 	[ExecuteInEditMode]
 	public class AbstractMap : MonoBehaviour, IMap
 	{
+
 		#region Private Fields
+		
+		public float maxZoom = 4;
+		
+		public float minZoom = 19;
+
+		
+
 
 		[SerializeField] private MapOptions _options = new MapOptions();
 		[SerializeField] private bool _initializeOnStart = true;
@@ -217,9 +225,13 @@ namespace Mapbox.Unity.Map
 
 		public void SetZoom(float zoom)
 		{
-            if (zoom <= 8 )
+            if (zoom <= 4 )
             {
-				zoom = 8;
+				zoom = 4;
+            }
+			if(zoom >= 19)
+            {
+				zoom = 19;
             }
 			Options.locationOptions.zoom = zoom;
 		}
