@@ -26,4 +26,11 @@ public class MapCamera : MonoBehaviour
 		// not so sure those will work:
 		transform.rotation = desiredRotation;
 	}
+
+	public void ResetToNorth()
+    {
+		Vector3 rot = new Vector3(90, 0, 0);
+
+		gameObject.transform.SetPositionAndRotation(transform.position, Quaternion.Euler(rot));
+	}
 }
