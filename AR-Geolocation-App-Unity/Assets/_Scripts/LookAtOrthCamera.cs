@@ -20,7 +20,7 @@ public class LookAtOrthCamera : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         transform.rotation = camera.transform.rotation;
         //transform.localScale = _mapManager.transform
