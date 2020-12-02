@@ -12,6 +12,7 @@
 		[SerializeField]
 		AbstractMap _map;
 
+		public GameObject POIIndicator;
 	
 		Vector2d[] _locations;
 
@@ -22,11 +23,13 @@
 		GameObject[] POIPrefabs;
 
 		List<GameObject> _spawnedObjects;
+		List<GameObject> _spawnedPOIObjects;
 
 		void Start()
 		{
 			_locations = new Vector2d[POIPrefabs.Length];
 			_spawnedObjects = new List<GameObject>();
+			_spawnedPOIObjects = new List<GameObject>();
 
 			for (int i = 0; i < POIPrefabs.Length; i++)
 			{
@@ -42,6 +45,9 @@
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 				//instance.transform.localScale = new Vector3(_spawnScale, instance.transform.localScale.y, _spawnScale);
 				_spawnedObjects.Add(instance);
+
+				var POIInstance = Instantiate(POIIndicator);
+				_spawnedPOIObjects.Add(POIInstance);
 			}
 		}
 
@@ -54,6 +60,10 @@
 				var location = _locations[i];
 				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
 				spawnedObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+
+				var spawnedPOIObject = _spawnedPOIObjects[i];
+				spawnedPOIObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
+
 			}
 			
 		}
