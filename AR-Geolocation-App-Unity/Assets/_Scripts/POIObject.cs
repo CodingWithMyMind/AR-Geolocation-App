@@ -4,36 +4,51 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
+using Mapbox.Unity.Location;
+using KDTree;
+using Mapbox.CheapRulerCs;
+using System;
 
 public class POIObject : MonoBehaviour
 {
     public string ARSceneToEnter = null;
 
     public string POIMapName = "POI";
-   private Text POIMapNameText;
+    private Text POIMapNameText;
 
     public string locationString;
     public string message;
-    public bool collected;
+
+    public GameObject mapPOIPinUI;
+
+    public bool playerAtThisPOI;
+
+    ILocationProvider _locationProvider;
+    ILocationProvider LocationProvider
+    {
+        get
+        {
+            if (_locationProvider == null)
+            {
+                _locationProvider = LocationProviderFactory.Instance.DefaultLocationProvider;
+            }
+
+            return _locationProvider;
+        }
+    }
 
 
-    public GameObject txtStatus;
-    public GameObject StatusPanel;
 
-    
+
 
     private void OnEnable()
     {
-
         POIMapNameText = this.gameObject.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Text>(); 
-       // POIMapNameText = transform.Find("Text").gameObject.
-        txtStatus = GameObject.Find("txtStatus");
-        StatusPanel = GameObject.Find("StatusPanel");
-
     }
     // Start is called before the first frame update
     void Start()
     {
+
         if (ARSceneToEnter == null)
         {
             ARSceneToEnter = "ARcene1";
@@ -43,13 +58,67 @@ public class POIObject : MonoBehaviour
             POIMapNameText.text = POIMapName;
         }
 
-        //DisplayStatus("Hello World");
+
+
+
+
+
+
+
+
+
+    }
+
+    private void DistanceToPlayer()
+    {
+        double[] playerLocation = new double[] { LocationProvider.CurrentLocation.LatitudeLongitude.x, LocationProvider.CurrentLocation.LatitudeLongitude.y };
+        var loc = Conversions.StringToLatLon(locationString);
+
+        double[] poiLoc = new double[] { loc.x, loc.y };
+        CheapRuler cr = new CheapRuler(playerLocation[1], CheapRulerUnits.Meters);
+
+        double distance = cr.Distance(playerLocation, poiLoc);
+
+        string distanceString;
+
+
+        distance = Math.Round(distance, 0);
+
+        if (distance < 1000)
+        {
+            distanceString = distance + "m";
+        }
+        else
+        {
+            distanceString = Math.Round((distance / 1000),0).ToString() + "km";
+        }
+
+        
+
+        
+
+        mapPOIPinUI.GetComponent<MapPOIUI>().UpdateDistanceFromPlayer(distanceString);
+
+
+
+        Debug.Log(gameObject.name + " is " + distance + " away from player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        DistanceToPlayer();
+
+        if (playerAtThisPOI)
+        {
+            Debug.Log("hiding content");
+            mapPOIPinUI.GetComponent<MapPOIUI>().HideContent();
+        }
+        else
+        {
+            Debug.Log("showing content");
+            mapPOIPinUI.GetComponent<MapPOIUI>().ShowContent();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -72,14 +141,14 @@ public class POIObject : MonoBehaviour
 
     public void DisplayStatus(string msg)
     {
-        StatusPanel.SetActive(true);
-        txtStatus.GetComponent<Text>().text = msg;
+        //StatusPanel.SetActive(true);
+        //txtStatus.GetComponent<Text>().text = msg;
         //Invoke("HideStatus", 2);
     }
     
     public void HideStatus()
     {
-        StatusPanel.SetActive(false);
+        //StatusPanel.SetActive(false);
     }
 
 

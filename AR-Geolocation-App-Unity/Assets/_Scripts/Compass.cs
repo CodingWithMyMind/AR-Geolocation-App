@@ -14,7 +14,7 @@ public class Compass : MonoBehaviour
     void Update()
     {
         float cameraZ = Camera.main.transform.rotation.eulerAngles.y;
-        Debug.Log(cameraZ);
+        //Debug.Log(cameraZ);
 
         Vector3 rot = new Vector3(0, 0, cameraZ);
 
