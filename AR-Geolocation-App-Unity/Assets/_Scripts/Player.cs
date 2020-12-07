@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         playerCollider.radius = map.transform.localScale.x * startColliderRadius;
     }
@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
             UIButtonToEnterAR.SetActive(true);
             AtPOI = true;
             Debug.Log("Player enter POI");
+            other.gameObject.GetComponent<POIObject>().playerAtThisPOI = true;
             
             CurrentPOI = other.gameObject.GetComponentInParent<POIObject>().ARSceneToEnter;
         }
@@ -72,9 +73,22 @@ public class Player : MonoBehaviour
         if (other.tag == "POI")
         {
             AtPOI = false;
-            UIButtonToEnterAR.SetActive(false);
-            Debug.Log("Player exit POI");
-            CurrentPOI = "Exited" + other.gameObject.name;
+            StartCoroutine("Exit");
+            other.gameObject.GetComponent<POIObject>().playerAtThisPOI = false;
         }
     }
+
+    // every 2 seconds perform the print()
+    private IEnumerator Exit()
+    {
+        yield return new WaitForSeconds(1f);
+        if (!AtPOI)
+        {
+            UIButtonToEnterAR.SetActive(false);
+            Debug.Log("Player exit POI");
+            CurrentPOI = "Exited";
+        }
+    }
+
+
 }

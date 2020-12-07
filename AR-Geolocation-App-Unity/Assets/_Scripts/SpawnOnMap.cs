@@ -27,6 +27,7 @@
 
 		void Start()
 		{
+
 			_locations = new Vector2d[POIPrefabs.Length];
 			_spawnedObjects = new List<GameObject>();
 			_spawnedPOIObjects = new List<GameObject>();
@@ -37,6 +38,7 @@
 
 				var locationString = POIPrefabs[i].GetComponent<POIObject>().locationString;
 
+				
 				_locations[i] = Conversions.StringToLatLon(locationString);
 
 
@@ -61,7 +63,12 @@
 				spawnedObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
 				spawnedObject.transform.localScale = new Vector3(gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
 
+
+		
 				var spawnedPOIObject = _spawnedPOIObjects[i];
+
+				spawnedObject.GetComponent<POIObject>().mapPOIPinUI = spawnedPOIObject;
+
 				spawnedPOIObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
 
 			}

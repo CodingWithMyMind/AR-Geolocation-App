@@ -28,6 +28,7 @@
 		void Start()
 		{
 			LocationProviderFactory.Instance.mapManager.OnInitialized += () => _isInitialized = true;
+			
 		}
 
 		void LateUpdate()
