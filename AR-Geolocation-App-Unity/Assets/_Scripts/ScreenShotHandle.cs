@@ -5,7 +5,9 @@ using UnityEngine;
 public class ScreenShotHandle : MonoBehaviour
 {
     public GameObject Holder;
+    public GameObject BlinkMotion;
     public AudioSource CaptureSound;
+    public float BlinkMotionSpeed = 0.3f;
 
     [SerializeField]
     
@@ -14,6 +16,8 @@ public class ScreenShotHandle : MonoBehaviour
     public void ScreenShot()
     {
         StartCoroutine("ScreenCaptureF");
+        BlinkMotion.SetActive(true);
+        Invoke("BlinkMotionOff", BlinkMotionSpeed);
     }
 
     IEnumerator ScreenCaptureF()
@@ -26,6 +30,7 @@ public class ScreenShotHandle : MonoBehaviour
         yield return new WaitForEndOfFrame();
         //ScreenCapture Motion but, It's not needed
         //Instantiate(BlinkMotion, new Vector2(0f, 0f), Quaternion.identity);
+        
  
     }
     // Start is called before the first frame update
@@ -48,5 +53,10 @@ public class ScreenShotHandle : MonoBehaviour
     void ActiveHolder()
     {
         Holder.SetActive(true);
+    }
+
+    void BlinkMotionOff()
+    {
+        BlinkMotion.SetActive(false);
     }
 }
