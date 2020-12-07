@@ -9,18 +9,22 @@ public class AudioManager : MonoBehaviour
     public GameObject SidePanel;
     public GameObject PlaceObject;
     public GameObject ResetObject;
+    public GameObject Holder;
+    public GameObject Capture;
     public AudioSource bgm;
     public AudioSource audioSource;
     public AudioSource audioSource2;
     public AudioSource audioSource3;
     public AudioSource OpenSFX;
     public AudioSource ButtonSound;
+
     public float animationSpeed;
 
     private Transform btnReturnToMapTransform;
     private Transform btnPlaceObjectTransform;
     private Transform btnResetObjectTransform;
     private Transform btnRmenuTransform;
+    private Transform btnScreenShotTransform;
 
     private float animationDelay = 0.1f;
     // Start is called before the first frame update
@@ -33,7 +37,7 @@ public class AudioManager : MonoBehaviour
         btnPlaceObjectTransform = GameObject.Find("PlaceObject").GetComponent<Transform>();
         btnResetObjectTransform = GameObject.Find("ResetObject").GetComponent<Transform>();
         btnRmenuTransform = GameObject.Find("ReturnToMenu").GetComponent<Transform>();
-        
+        btnScreenShotTransform = GameObject.Find("ScreenShot").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -74,7 +78,7 @@ public class AudioManager : MonoBehaviour
         btnPlaceObjectTransform.localScale = new Vector3(1, 1, 1);
         btnResetObjectTransform.localScale = new Vector3(1, 1, 1);
         btnRmenuTransform.localScale = new Vector3(1, 1, 1);
-        //btnObjATransform.localScale = new Vector3(1, 1, 1);
+        btnScreenShotTransform.localScale = new Vector3(1, 1, 1);
 
 
     }
@@ -90,21 +94,27 @@ public class AudioManager : MonoBehaviour
         switch (buttonName)
         {
             
-        case "ReturnToMap":    
+            case "ReturnToMap":    
                 animation(btnReturnToMapTransform);
                 Invoke("EnterARScene", animationSpeed + animationDelay);
                 break;
-        case "PlaceObject":
+            case "PlaceObject":
                 animation(btnPlaceObjectTransform);
                 Invoke("SetSidePanel", animationSpeed + animationDelay);
                 break;
-        case "ResetS":
+            case "ResetS":
                 animation(btnResetObjectTransform);             
                 break;
-            case "ReturnMenu":
-                BacktoMenu();
+            case "ReturnMenu":           
                 animation(btnRmenuTransform);
+                Invoke("BacktoMenu", animationSpeed + animationDelay);
                 break;
+
+            case "ScreenCapture":
+                animation(btnScreenShotTransform);
+                Invoke("ScreenShotPanel", animationSpeed + animationDelay);
+                break;
+
 
 
 
@@ -131,6 +141,14 @@ public class AudioManager : MonoBehaviour
     {
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
+
+    void ScreenShotPanel()
+    {
+        Holder.SetActive(false);
+        Capture.SetActive(true);
+    }
+
+    
 
     
 

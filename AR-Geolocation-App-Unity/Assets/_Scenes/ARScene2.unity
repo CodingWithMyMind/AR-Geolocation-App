@@ -401,7 +401,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Holder: {fileID: 661824791}
   CaptureSound: {fileID: 1617785157}
-  blink: {fileID: 0}
 --- !u!114 &170442047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3686,6 +3685,8 @@ MonoBehaviour:
   SidePanel: {fileID: 358210216}
   PlaceObject: {fileID: 1053385772}
   ResetObject: {fileID: 967440117}
+  Holder: {fileID: 661824791}
+  Capture: {fileID: 1831209601}
   bgm: {fileID: 1298162949}
   audioSource: {fileID: 833137889}
   audioSource2: {fileID: 2056458194}
@@ -5139,28 +5140,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 661824791}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1368417716}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: buttonOnClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1831209601}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ResetS
+          m_StringArgument: ScreenCapture
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1893329489

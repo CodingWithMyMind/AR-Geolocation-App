@@ -6,8 +6,9 @@ public class ScreenShotHandle : MonoBehaviour
 {
     public GameObject Holder;
     public AudioSource CaptureSound;
+
     [SerializeField]
-    //GameObject Motion;
+    
 
 
     public void ScreenShot()
@@ -24,7 +25,8 @@ public class ScreenShotHandle : MonoBehaviour
         ScreenCapture.CaptureScreenshot(pathToSave);
         yield return new WaitForEndOfFrame();
         //ScreenCapture Motion but, It's not needed
-        //Instantiate(Motion, new Vector2(0f, 0f), Quaternion.identity);
+        //Instantiate(BlinkMotion, new Vector2(0f, 0f), Quaternion.identity);
+ 
     }
     // Start is called before the first frame update
     void Start()

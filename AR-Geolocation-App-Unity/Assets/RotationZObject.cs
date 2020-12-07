@@ -28,18 +28,17 @@ public class RotationZObject : MonoBehaviour
 
 			_rotation.z = -(_mouseOffset.x + _mouseOffset.y) * _sensitivity;
 
-
-
-
-
-
-
+			
 			// rotate
 			gameObject.transform.Rotate(_rotation);
 
 			// store new mouse position
 			_mouseReference = Input.mousePosition;
+
+			
 		}
+
+		//transform.Rotate(new Vector3(0f, 0f, 100f) * Time.deltaTime);
 	}
 
 	void OnMouseDown()
