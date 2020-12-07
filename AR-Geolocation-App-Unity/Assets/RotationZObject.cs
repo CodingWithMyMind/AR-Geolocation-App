@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class RotationZObject : MonoBehaviour
 {
+	public bool Voice = false;
+	public AudioSource Voiceover;
 
 	#region ROTATE
 	private float _sensitivity = 1f;
@@ -24,15 +26,19 @@ public class RotationZObject : MonoBehaviour
 			// offset
 			_mouseOffset = (Input.mousePosition - _mouseReference);
 
-			// apply rotation
 			_rotation.z = -(_mouseOffset.x + _mouseOffset.y) * _sensitivity;
 
+			
 			// rotate
 			gameObject.transform.Rotate(_rotation);
 
 			// store new mouse position
 			_mouseReference = Input.mousePosition;
+
+			
 		}
+
+		//transform.Rotate(new Vector3(0f, 0f, 100f) * Time.deltaTime);
 	}
 
 	void OnMouseDown()
@@ -49,6 +55,10 @@ public class RotationZObject : MonoBehaviour
 		// rotating flag
 		_isRotating = false;
 	}
+
+
+
+
 
 }
 
