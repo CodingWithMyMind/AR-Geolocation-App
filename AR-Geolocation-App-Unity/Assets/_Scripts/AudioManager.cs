@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     public GameObject ResetObject;
     public GameObject Holder;
     public GameObject Capture;
+    public GameObject Gallarybtn;
     public AudioSource bgm;
     public AudioSource audioSource;
     public AudioSource audioSource2;
@@ -25,6 +26,7 @@ public class AudioManager : MonoBehaviour
     private Transform btnResetObjectTransform;
     private Transform btnRmenuTransform;
     private Transform btnScreenShotTransform;
+    private Transform btnGallarybtnTransform;
 
     private float animationDelay = 0.1f;
     // Start is called before the first frame update
@@ -38,6 +40,7 @@ public class AudioManager : MonoBehaviour
         btnResetObjectTransform = GameObject.Find("ResetObject").GetComponent<Transform>();
         btnRmenuTransform = GameObject.Find("ReturnToMenu").GetComponent<Transform>();
         btnScreenShotTransform = GameObject.Find("ScreenShot").GetComponent<Transform>();
+        btnGallarybtnTransform = GameObject.Find("Gallarybtn").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -79,6 +82,7 @@ public class AudioManager : MonoBehaviour
         btnResetObjectTransform.localScale = new Vector3(1, 1, 1);
         btnRmenuTransform.localScale = new Vector3(1, 1, 1);
         btnScreenShotTransform.localScale = new Vector3(1, 1, 1);
+        btnGallarybtnTransform.localScale = new Vector3(1, 1, 1);
 
 
     }
@@ -115,6 +119,11 @@ public class AudioManager : MonoBehaviour
                 Invoke("ScreenShotPanel", animationSpeed + animationDelay);
                 break;
 
+            case "GallaryS":
+                animation(btnGallarybtnTransform);
+                Invoke("LoadGScene", animationSpeed + animationDelay);
+                break;
+
 
 
 
@@ -148,11 +157,17 @@ public class AudioManager : MonoBehaviour
         Capture.SetActive(true);
     }
 
-    
+    void LoadGScene()
+    {
+        SceneManager.LoadScene("Gallary", LoadSceneMode.Single);
+    }
 
-    
 
 
 
-  
+
+
+
+
+
 }

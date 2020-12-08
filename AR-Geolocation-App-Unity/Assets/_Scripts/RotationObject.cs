@@ -27,6 +27,8 @@ public class RotationObject : MonoBehaviour
 			// apply rotation
 			_rotation.y = -(_mouseOffset.x + _mouseOffset.y) * _sensitivity;
 
+			
+
 			// rotate
 			gameObject.transform.Rotate(_rotation);
 
