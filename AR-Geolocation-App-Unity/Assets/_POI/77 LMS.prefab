@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8411961016082239743}
   - component: {fileID: 1514166574999457762}
   m_Layer: 0
-  m_Name: Template POI
+  m_Name: 77 LMS
   m_TagString: POI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,8 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonToEnterAR: {fileID: 0}
   ARSceneToEnter: ARScene1
-  POIMapName: POI
-  locationString: '-38.148564, 144.361620 '
+  POIMapName: 77 lms
+  locationString: '-38.147906, 144.358920 '
   message: 
   mapPOIPinUI: {fileID: 0}
   playerAtThisPOI: 0
@@ -291,7 +291,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 976db5332cd17824a9d23666a5c85956, type: 3}
     m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 1

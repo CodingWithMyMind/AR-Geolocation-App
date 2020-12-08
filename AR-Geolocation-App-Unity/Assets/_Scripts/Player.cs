@@ -65,10 +65,6 @@ public class Player : MonoBehaviour
         {
             UIButtonToEnterAR.SetActive(true);
             AtPOI = true;
-            Debug.Log("Player enter POI");
-            other.gameObject.GetComponent<POIObject>().playerAtThisPOI = true;
-            
-            ARSceneToEnter = other.gameObject.GetComponentInParent<POIObject>().ARSceneToEnter;
 
             CurrentPOIGameObject = other.gameObject;
         }
@@ -93,7 +89,6 @@ public class Player : MonoBehaviour
         if (!AtPOI)
         {
             UIButtonToEnterAR.SetActive(false);
-            CurrentPOIGameObject.GetComponent<POIObject>().playerAtThisPOI = false;
             Debug.Log("Player exit POI");
             ARSceneToEnter = "Exited";
         }

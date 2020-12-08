@@ -107,6 +107,7 @@
 			Debug.Log("Map centred to players location");
 			//_referenceCamera.transform.localEulerAngles = defaultRotation;
 
+
 			_referenceCamera.transform.parent = Player.Instance.transform;
 
 			_referenceCamera.transform.localPosition = new Vector3(0, 200, 0);
@@ -127,9 +128,6 @@
 			_referenceCamera.transform.localPosition = new Vector3(0, 200, 0);
 			//_referenceCamera.transform.parent = newCameraParent;
 		}
-
-		
-		
 
 
 		private void LateUpdate()

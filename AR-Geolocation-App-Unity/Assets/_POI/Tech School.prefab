@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8411961016082239743}
   - component: {fileID: 1514166574999457762}
   m_Layer: 0
-  m_Name: Template POI
+  m_Name: Tech School
   m_TagString: POI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,8 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonToEnterAR: {fileID: 0}
   ARSceneToEnter: ARScene1
-  POIMapName: POI
-  locationString: '-38.148564, 144.361620 '
+  POIMapName: Geelong Tech School
+  locationString: '-38.146178, 144.353304 '
   message: 
   mapPOIPinUI: {fileID: 0}
   playerAtThisPOI: 0
