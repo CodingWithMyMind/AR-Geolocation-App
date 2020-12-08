@@ -156,9 +156,13 @@ namespace Mapbox.Examples
 		}
 
 
-		void Update()
+		void LateUpdate()
 		{
-			transform.localRotation = Quaternion.Lerp(transform.localRotation, _targetRotation, Time.deltaTime * _rotationFollowFactor);
+            //if (!firstTime)
+            {
+				transform.localRotation = Quaternion.Lerp(transform.localRotation, _targetRotation, Time.deltaTime * _rotationFollowFactor);
+
+			}
 		}
 	}
 }

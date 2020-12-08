@@ -11,6 +11,9 @@ using System;
 
 public class POIObject : MonoBehaviour
 {
+
+    public GameObject ButtonToEnterAR;
+
     public string ARSceneToEnter = null;
 
     public string POIMapName = "POI";
@@ -21,7 +24,7 @@ public class POIObject : MonoBehaviour
 
     public GameObject mapPOIPinUI;
 
-    public bool playerAtThisPOI;
+    public bool playerAtThisPOI = false;
 
     ILocationProvider _locationProvider;
     ILocationProvider LocationProvider
@@ -37,6 +40,25 @@ public class POIObject : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("Player is inside of " + gameObject.name);
+            
+            playerAtThisPOI = true;
+            Player.Instance.ARSceneToEnter = ARSceneToEnter;
+
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("player exit poi");
+            playerAtThisPOI = false;
+        }
+    }
 
 
 
@@ -93,30 +115,22 @@ public class POIObject : MonoBehaviour
             distanceString = Math.Round((distance / 1000),0).ToString() + "km";
         }
 
-        
-
-        
-
         mapPOIPinUI.GetComponent<MapPOIUI>().UpdateDistanceFromPlayer(distanceString);
-
-
-
-        Debug.Log(gameObject.name + " is " + distance + " away from player");
+        //Debug.Log(gameObject.name + " is " + distance + " away from player");
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         DistanceToPlayer();
-
         if (playerAtThisPOI)
         {
-            Debug.Log("hiding content");
+            //Debug.Log("hiding content");
             mapPOIPinUI.GetComponent<MapPOIUI>().HideContent();
         }
         else
         {
-            Debug.Log("showing content");
+            //Debug.Log("showing content");
             mapPOIPinUI.GetComponent<MapPOIUI>().ShowContent();
         }
     }
@@ -130,14 +144,7 @@ public class POIObject : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        // Exit POI
-        if (other.tag == "Player")
-        {
-            HideStatus();
-        }
-    }
+
 
     public void DisplayStatus(string msg)
     {

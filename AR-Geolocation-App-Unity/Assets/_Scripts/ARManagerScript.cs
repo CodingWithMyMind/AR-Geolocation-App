@@ -30,7 +30,7 @@ public class ARManagerScript : MonoBehaviour
     public void EnterARScene()
     {
         string mapToEnter;
-        mapToEnter = Player.Instance.CurrentPOI;
+        mapToEnter = Player.Instance.ARSceneToEnter;
         Debug.Log(mapToEnter);
         SceneManager.LoadScene(mapToEnter, LoadSceneMode.Single);
     }

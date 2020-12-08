@@ -79,7 +79,7 @@ public class MapDebug : MonoBehaviour
             coordinateText.text = "Lat: "+ LocationProvider.CurrentLocation.LatitudeLongitude.x.ToString() +" Lon: "+ LocationProvider.CurrentLocation.LatitudeLongitude.y.ToString();
 
 
-            currentPOIText.text = Player.Instance.CurrentPOI;
+            currentPOIText.text = Player.Instance.ARSceneToEnter;
 }
     }
 }
