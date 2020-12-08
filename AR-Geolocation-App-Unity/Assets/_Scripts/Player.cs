@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class Player : MonoBehaviour
 
     private BoxCollider playerCollider;
     private Vector3 startColliderSize;
+
+    public GameObject ArrivedFeedback;
+    public Text ArrivedText;
 
     
 
@@ -47,6 +51,10 @@ public class Player : MonoBehaviour
 
         startColliderSize = playerCollider.size;
         map = GameObject.Find("Map");
+
+
+        ArrivedFeedback.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -67,6 +75,8 @@ public class Player : MonoBehaviour
             AtPOI = true;
 
             CurrentPOIGameObject = other.gameObject;
+            ArrivedFeedback.SetActive(true);
+            ArrivedText.text = CurrentPOIGameObject.GetComponent<POIObject>().POIMapName;
         }
     }
 
@@ -77,6 +87,7 @@ public class Player : MonoBehaviour
             Debug.Log("player trying to exit");
             AtPOI = false;
             StartCoroutine("Exit");
+            
             
         }
     }
@@ -89,6 +100,7 @@ public class Player : MonoBehaviour
         if (!AtPOI)
         {
             UIButtonToEnterAR.SetActive(false);
+            ArrivedFeedback.SetActive(false);
             Debug.Log("Player exit POI");
             ARSceneToEnter = "Exited";
         }
