@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
 
 
         ArrivedFeedback.SetActive(false);
+        UIButtonToEnterAR.SetActive(false);
 
     }
 
