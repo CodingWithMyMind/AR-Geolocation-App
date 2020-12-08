@@ -95,7 +95,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 15, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &27192565967896066
 MonoBehaviour:
@@ -109,14 +109,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0617504c7ba5622498a720c69eebe24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonToEnterAR: {fileID: 0}
   ARSceneToEnter: ARScene2
   POIMapName: POI Ken
-  POIMapNameText: {fileID: 7537533396334678143}
   locationString: -37.803066, 145.078756
   message: This is Kens POI
-  collected: 0
-  txtStatus: {fileID: 0}
-  StatusPanel: {fileID: 0}
+  mapPOIPinUI: {fileID: 0}
+  playerAtThisPOI: 0
 --- !u!1 &3185366617701670793
 GameObject:
   m_ObjectHideFlags: 0

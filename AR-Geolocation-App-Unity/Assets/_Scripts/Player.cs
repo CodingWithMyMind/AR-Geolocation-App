@@ -7,16 +7,19 @@ public class Player : MonoBehaviour
 
     public GameObject UIButtonToEnterAR;
 
+    public GameObject CurrentPOIGameObject;
+
     private static Player _instance;
 
     public bool AtPOI;
 
-    public string CurrentPOI;
+
+    public string ARSceneToEnter;
 
     private GameObject map;
 
-    private CapsuleCollider playerCollider;
-    private float startColliderRadius;
+    private BoxCollider playerCollider;
+    private Vector3 startColliderSize;
 
     
 
@@ -36,19 +39,20 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurrentPOI = "POI1";
+        ARSceneToEnter = "POI1";
         Instance = this;
         UIButtonToEnterAR = GameObject.Find("EnterARButton");
 
-        playerCollider = this.gameObject.GetComponent<CapsuleCollider>();
-        startColliderRadius = playerCollider.radius;
+        playerCollider = this.gameObject.GetComponent<BoxCollider>();
+
+        startColliderSize = playerCollider.size;
         map = GameObject.Find("Map");
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        playerCollider.radius = map.transform.localScale.x * startColliderRadius;
+        playerCollider.size = map.transform.localScale.x * startColliderSize;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -64,7 +68,9 @@ public class Player : MonoBehaviour
             Debug.Log("Player enter POI");
             other.gameObject.GetComponent<POIObject>().playerAtThisPOI = true;
             
-            CurrentPOI = other.gameObject.GetComponentInParent<POIObject>().ARSceneToEnter;
+            ARSceneToEnter = other.gameObject.GetComponentInParent<POIObject>().ARSceneToEnter;
+
+            CurrentPOIGameObject = other.gameObject;
         }
     }
 
@@ -72,21 +78,24 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "POI")
         {
+            Debug.Log("player trying to exit");
             AtPOI = false;
             StartCoroutine("Exit");
-            other.gameObject.GetComponent<POIObject>().playerAtThisPOI = false;
+            
         }
     }
 
     // every 2 seconds perform the print()
     private IEnumerator Exit()
     {
+
         yield return new WaitForSeconds(1f);
         if (!AtPOI)
         {
             UIButtonToEnterAR.SetActive(false);
+            CurrentPOIGameObject.GetComponent<POIObject>().playerAtThisPOI = false;
             Debug.Log("Player exit POI");
-            CurrentPOI = "Exited";
+            ARSceneToEnter = "Exited";
         }
     }
 

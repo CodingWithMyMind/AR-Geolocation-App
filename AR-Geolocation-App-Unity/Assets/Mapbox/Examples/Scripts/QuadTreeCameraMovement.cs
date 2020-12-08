@@ -10,10 +10,7 @@
 
 	public class QuadTreeCameraMovement : MonoBehaviour
 	{
-
-
-
-
+		public GameObject followPlayerUIFeedback;
 		[SerializeField]
 		[Range(1, 20)]
 		public float _panSpeed = 1.0f;
@@ -45,7 +42,7 @@
 		private Plane _groundPlane = new Plane(Vector3.up, 0);
 		private bool _dragStartedOnUI = false;
 
-		public bool cameraAtachedToPlayer = true;
+		public bool followingPlayerPosition = true;
 
 
 
@@ -68,7 +65,7 @@
 			if (Input.GetMouseButtonDown(0))
             {
 
-				if (cameraAtachedToPlayer)
+				if (followingPlayerPosition)
 				{
 					DetachFromPlayer();
 				}
@@ -83,40 +80,51 @@
 			{
 				_dragStartedOnUI = false;
 			}
+
+            if (followingPlayerPosition)
+            {
+				followPlayerUIFeedback.SetActive(true);
+            }
+            else
+            {
+				followPlayerUIFeedback.SetActive(false);
+			}
 		}
 
 		public void FollowPlayer()
         {
-			
-			
-
-		
 			// get location provider of player
 			ILocationProvider _locationProvider = LocationProviderFactory.Instance.DefaultLocationProvider;
 
 			// set the centre of the map to be the players current location
 			_mapManager.SetCenterLatitudeLongitude(_locationProvider.CurrentLocation.LatitudeLongitude);
 
+			// zoom in
 			_mapManager.SetZoom(18);
-
+			// update map
 			_mapManager.UpdateMap();
 
 			Debug.Log("Map centred to players location");
 			//_referenceCamera.transform.localEulerAngles = defaultRotation;
+
 			_referenceCamera.transform.parent = Player.Instance.transform;
-			_referenceCamera.transform.localPosition = new Vector3(0, 100, 0);
-			cameraAtachedToPlayer = true;
+
+			_referenceCamera.transform.localPosition = new Vector3(0, 200, 0);
+
+			_mapManager.UpdateMap();
+
+			followingPlayerPosition = true;
 		}
 
 		public void DetachFromPlayer()
         {
 			
 			Debug.Log("Camera detached from player");
-			cameraAtachedToPlayer = false;
-			_referenceCamera.transform.SetParent(otherTransform);
+			followingPlayerPosition = false;
+			//_referenceCamera.transform.SetParent(otherTransform);
 
 			_referenceCamera.transform.SetParent(newCameraParent);
-			_referenceCamera.transform.localPosition = new Vector3(0, 100, 0);
+			_referenceCamera.transform.localPosition = new Vector3(0, 200, 0);
 			//_referenceCamera.transform.parent = newCameraParent;
 		}
 
