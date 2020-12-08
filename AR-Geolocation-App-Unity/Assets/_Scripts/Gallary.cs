@@ -19,6 +19,7 @@ public class Gallary : MonoBehaviour
         files = Directory.GetFiles(Application.persistentDataPath + "/", "*.png");
         if (files.Length > 0)
             DisplayScreenShot();
+        //CurrentScreenshot = File.length - 1;
     }
 
     void DisplayScreenShot()
