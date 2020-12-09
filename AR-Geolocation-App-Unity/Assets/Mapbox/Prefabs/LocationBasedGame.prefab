@@ -382,7 +382,6 @@ GameObject:
   - component: {fileID: 114668955501623132}
   - component: {fileID: 1395839493076415394}
   - component: {fileID: 719911347}
-  - component: {fileID: 719911346}
   m_Layer: 0
   m_Name: PlayerTarget
   m_TagString: Player
@@ -466,20 +465,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!136 &719911346
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065618987163410}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1.5
-  m_Height: 6
-  m_Direction: 1
-  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &1080079784494230
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd961b1c9541a4cee99686069ecce852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxZoom: 8
+  minZoom: 19
   _options:
     locationOptions:
       latitudeLongitude: -37.803066, 145.078756
@@ -998,6 +985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _map: {fileID: 114105500206378512}
+  POIIndicator: {fileID: 0}
   _spawnScale: 10
   POIPrefabs:
   - {fileID: 1936073976716260293, guid: 889a0b2a20b61d048bf796b0c080d6ed, type: 3}
