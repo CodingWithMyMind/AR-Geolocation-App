@@ -130,6 +130,10 @@ public class GameManager : MonoBehaviour
         state = State.Menu;
     }
 
+
+
+    // do once here
+
     public void EnterMap()
     {
         TurnOnUI(MapUI,MapNavUI);
