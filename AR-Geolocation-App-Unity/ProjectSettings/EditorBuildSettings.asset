@@ -20,10 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/ARScene1c.unity
     guid: e21904f67be10474e837521800b976ca
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/ARScene2.unity
     guid: e1738b8a40ca54a4fb8f2906df112309
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/Gallary.unity
     guid: 3614d5bf6fd66c04b989d87c8ab90c74
   m_configObjects:
