@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimerHandle : MonoBehaviour
 {
     public Text TimerDisplay;
+    
     private float countValue;
     // Start is called before the first frame update
     void Start()
@@ -28,4 +30,8 @@ public class TimerHandle : MonoBehaviour
 
         TimerDisplay.text = string.Format("{0:00}:{1:00}", Minutes, seconds);
     }
+
+
+
+
 }
