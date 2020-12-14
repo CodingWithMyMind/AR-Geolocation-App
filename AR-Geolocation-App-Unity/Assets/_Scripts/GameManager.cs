@@ -47,8 +47,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
-        state = State.Map;
+
+        state = State.Menu;
+        EnterMenu();
     }
 
     void Update()
@@ -98,11 +99,10 @@ public class GameManager : MonoBehaviour
      * used like constructers to set up play states 
     */
 
-
-
     public void TurnOnUI(GameObject UIToTurnOn, GameObject UIButtonToTurnOn)
     {
         // Set all UI screens off
+        MenuUI.SetActive(false);
         MapUI.SetActive(false);
         ARModeUI.SetActive(false);
         LocationsUI.SetActive(false);
@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
     {
 
 
-        //TurnOnUI(MenuUI,MenuNavUI);
+        TurnOnUI(MenuUI,MapNavUI);
    
         state = State.Menu;
     }
