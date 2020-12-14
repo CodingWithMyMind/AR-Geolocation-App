@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonToEnterAR: {fileID: 0}
-  ARSceneToEnter: ARScene1
+  ARSceneToEnter: ARScene2
   POIMapName: Benches
   locationString: '-38.148564, 144.361620 '
   message: 
