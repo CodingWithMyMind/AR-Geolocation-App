@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
         POI1 = GameObject.Find("CheckPOI1");
 
 
+
         playerCollider = this.gameObject.GetComponent<BoxCollider>();
 
         startColliderSize = playerCollider.size;
@@ -73,17 +74,33 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
+        
         if (other.tag == "POI")
         {
+            
             UIButtonToEnterAR.SetActive(true);
             AtPOI = true;
+            POI1.GetComponent<Toggle>().isOn = true;
 
             CurrentPOIGameObject = other.gameObject;
             ArrivedFeedback.SetActive(true);
             ArrivedText.text = CurrentPOIGameObject.GetComponent<POIObject>().POIMapName;
 
-            POI1.GetComponent<Toggle>().isOn = true;
+            
         }
+
+        /*if (other.tag == "KenPOI")
+        {
+            UIButtonToEnterAR.SetActive(true);
+            AtPOI = true;
+            POI1.GetComponent<Toggle>().isOn = true;
+
+            CurrentPOIGameObject = other.gameObject;
+            ArrivedFeedback.SetActive(true);
+            ArrivedText.text = CurrentPOIGameObject.GetComponent<POIObject>().POIMapName;
+
+            
+        }*/
     }
 
     private void OnTriggerExit(Collider other)
