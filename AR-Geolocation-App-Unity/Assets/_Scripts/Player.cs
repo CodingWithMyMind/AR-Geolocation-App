@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public GameObject UIButtonToEnterAR;
 
     public GameObject CurrentPOIGameObject;
+    public GameObject POI1;
 
     private static Player _instance;
 
@@ -46,6 +47,8 @@ public class Player : MonoBehaviour
         ARSceneToEnter = "POI1";
         Instance = this;
         UIButtonToEnterAR = GameObject.Find("EnterARButton");
+        POI1 = GameObject.Find("CheckPOI1");
+
 
         playerCollider = this.gameObject.GetComponent<BoxCollider>();
 
@@ -78,6 +81,8 @@ public class Player : MonoBehaviour
             CurrentPOIGameObject = other.gameObject;
             ArrivedFeedback.SetActive(true);
             ArrivedText.text = CurrentPOIGameObject.GetComponent<POIObject>().POIMapName;
+
+            POI1.GetComponent<Toggle>().isOn = true;
         }
     }
 
