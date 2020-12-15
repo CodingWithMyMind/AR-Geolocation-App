@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+    
     public enum State { Menu, Map, ARMode, Locations, Gallery, Info};
 
     public GameObject MenuUI, MapUI, ARModeUI, LocationsUI, GalleryUI, InfoUI;
@@ -42,14 +44,39 @@ public class GameManager : MonoBehaviour
   //      IOSBuild = true;
 //#endif
 
+       
+
+
+/*           GameObject[] objs = GameObject.FindGameObjectsWithTag("GameManager");
+
+            if (objs.Length > 1)
+            {
+                Destroy(this.gameObject);
+            }
+
+            DontDestroyOnLoad(this.gameObject);
+*/
+
         Instance = this;
+
     }
 
     void Start()
     {
-
-        state = State.Menu;
-        EnterMenu();
+        // First time check if has already done the onboarding
+        if (PlayerPrefs.GetInt("onBoarding") == 0)
+        {
+            // if not then enter the main menu/onboarding
+            EnterMenu();
+            // Set player prefs so know has already completed onboarding
+            PlayerPrefs.SetInt("onBoarding", 1);
+            
+        }
+        else
+        {
+            // if player has already completed onboarding then send them to the map
+            EnterMap();
+        }
     }
 
     void Update()
@@ -174,6 +201,19 @@ public class GameManager : MonoBehaviour
 
 
         state = State.Locations;
+    }
+
+    public void ClearSavedData()
+    {
+        PlayerPrefs.SetInt("onBoarding", 0);
+    }
+
+   
+    void OnApplicationQuit()
+    {
+        // clear the saved data on app quit for testing purposes
+        ClearSavedData();
+        Debug.Log("Application ending after " + Time.time + " seconds");
     }
 
 
