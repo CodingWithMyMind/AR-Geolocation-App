@@ -225,9 +225,9 @@ namespace Mapbox.Unity.Map
 
 		public void SetZoom(float zoom)
 		{
-            if (zoom <= 4 )
+            if (zoom <= 8.5f )
             {
-				zoom = 4;
+				zoom = 8.5f;
             }
 			if(zoom >= 19)
             {
