@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     {
         ARSceneToEnter = "POI1";
         Instance = this;
-        UIButtonToEnterAR = GameObject.Find("EnterARButton");
+        //UIButtonToEnterAR = GameObject.Find("EnterARButton");
 
         playerCollider = this.gameObject.GetComponent<BoxCollider>();
 
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        playerCollider.size = map.transform.localScale.x * startColliderSize;
+        playerCollider.size = map.transform.localScale.x * startColliderSize * 0.1f;
     }
 
     private void OnTriggerEnter(Collider other)
