@@ -403,6 +403,7 @@ MonoBehaviour:
   BlinkMotion: {fileID: 311750648}
   CaptureSound: {fileID: 1617785157}
   BlinkMotionSpeed: 0.3
+  Blinkdelay: 0.5
 --- !u!114 &170442047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -792,8 +793,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1368417716}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: buttonOnClick
-        m_Mode: 5
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

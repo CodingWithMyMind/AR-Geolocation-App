@@ -9,11 +9,14 @@ public class Player : MonoBehaviour
     public GameObject UIButtonToEnterAR;
 
     public GameObject CurrentPOIGameObject;
-    public GameObject POI1;
+    public GameObject POII1;
+    public GameObject POI3;
 
     private static Player _instance;
 
     public bool AtPOI;
+    public bool BenchesPOI = false;
+    public bool KenLPOI = false;
 
 
     public string ARSceneToEnter;
@@ -44,10 +47,16 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        POII1 = GameObject.Find("CheckPOI1");
+        POI3 = GameObject.Find("CheckPOI3");
         ARSceneToEnter = "POI1";
         Instance = this;
         UIButtonToEnterAR = GameObject.Find("EnterARButton");
-        POI1 = GameObject.Find("CheckPOI1");
+
+
+
+
+
 
 
 
@@ -62,10 +71,25 @@ public class Player : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        if (BenchesPOI == true)
+            {
+            POI3.GetComponent<Toggle>().isOn = true;
+            }
+
+        if (KenLPOI == true)
+        {
+            POII1.GetComponent<Toggle>().isOn = true;
+        }
+    }
+
     // Update is called once per frame
     void LateUpdate()
     {
-        playerCollider.size = map.transform.localScale.x * startColliderSize;
+        //playerCollider.size = map.transform.localScale.x * startColliderSize;
+
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -77,30 +101,32 @@ public class Player : MonoBehaviour
         
         if (other.tag == "POI")
         {
-            
+
+            //POI3 = GameObject.Find("CheckPOI3");
             UIButtonToEnterAR.SetActive(true);
             AtPOI = true;
-            POI1.GetComponent<Toggle>().isOn = true;
-
             CurrentPOIGameObject = other.gameObject;
             ArrivedFeedback.SetActive(true);
             ArrivedText.text = CurrentPOIGameObject.GetComponent<POIObject>().POIMapName;
+            BenchesPOI = true;
 
-            
         }
 
-        /*if (other.tag == "KenPOI")
+        if (other.tag == "KenPOI")
         {
+            //POII1.GetComponent<Toggle>().isOn = true;
             UIButtonToEnterAR.SetActive(true);
             AtPOI = true;
-            POI1.GetComponent<Toggle>().isOn = true;
+            
 
             CurrentPOIGameObject = other.gameObject;
             ArrivedFeedback.SetActive(true);
             ArrivedText.text = CurrentPOIGameObject.GetComponent<POIObject>().POIMapName;
+            KenLPOI = true;
 
-            
-        }*/
+
+
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -128,6 +154,8 @@ public class Player : MonoBehaviour
             ARSceneToEnter = "Exited";
         }
     }
+
+
 
 
 }

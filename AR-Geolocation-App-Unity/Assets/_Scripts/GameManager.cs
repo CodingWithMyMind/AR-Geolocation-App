@@ -148,7 +148,7 @@ public class GameManager : MonoBehaviour
     {
         TurnOnUI(ARModeUI,ARModeNavUI);
 
-        SceneManager.LoadSceneAsync("ARScene1");
+        SceneManager.LoadSceneAsync("ARScene2");
 
         state = State.ARMode;
     }
