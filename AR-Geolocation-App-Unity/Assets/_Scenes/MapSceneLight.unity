@@ -1418,7 +1418,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter AR Scene 1b
+  m_Text: Portal Scene
 --- !u!222 &250345312
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1944,7 +1944,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ARScene1b
+          m_StringArgument: ARScene2Portal
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &298225429
@@ -3914,6 +3914,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684396017}
+  m_CullTransparentMesh: 1
+--- !u!1 &685323451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685323452}
+  - component: {fileID: 685323454}
+  - component: {fileID: 685323453}
+  m_Layer: 5
+  m_Name: CoordinatesText (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &685323452
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685323451}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3893206246738884706}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -103.66}
+  m_SizeDelta: {x: 349.19, y: 109.95}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &685323453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685323451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: a3e6cba1bb213144e96c182493ff230c, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &685323454
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685323451}
   m_CullTransparentMesh: 1
 --- !u!1 &686265275
 GameObject:
@@ -7695,7 +7774,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter AR Scene 1c
+  m_Text: Arcade
 --- !u!222 &1340706326
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12231,6 +12310,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: ARScene1
       objectReference: {fileID: 0}
+    - target: {fileID: 2527021317728887645, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
+      propertyPath: m_Text
+      value: 1# Little Malop
+      objectReference: {fileID: 0}
     - target: {fileID: 3082496309976952585, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 60
@@ -12240,24 +12323,28 @@ PrefabInstance:
       value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 3893206245724707162, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
+      propertyPath: m_Text
+      value: Current Coordinates
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893206245724707162, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: a3e6cba1bb213144e96c182493ff230c, type: 3}
     - target: {fileID: 3893206245724707163, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 361.4388
+      value: 349.19
       objectReference: {fileID: 0}
     - target: {fileID: 3893206245724707163, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 158.63
+      value: 44.3398
       objectReference: {fileID: 0}
     - target: {fileID: 3893206245724707163, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -282.2694
+      value: -288.39
       objectReference: {fileID: 0}
     - target: {fileID: 3893206245724707163, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -90.07
+      value: -32.924904
       objectReference: {fileID: 0}
     - target: {fileID: 3893206245965359691, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_FontData.m_Font
@@ -12403,6 +12490,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnableDebugMode
       objectReference: {fileID: 0}
+    - target: {fileID: 3893206247061772441, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 341.6297
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893206247061772441, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -78.80765
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893206247061772441, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 3893206247061772443, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -12425,12 +12524,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3893206247159984152, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3893206247203868580, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: a3e6cba1bb213144e96c182493ff230c, type: 3}
+    - target: {fileID: 3893206247203868581, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 161.2395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893206247203868581, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -201.38022
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893206247203868581, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 125
+      objectReference: {fileID: 0}
     - target: {fileID: 3893206247524523288, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
       propertyPath: m_IsOn
       value: 0
@@ -12525,3 +12636,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e5e5baeae8b294cbd3620f28073f80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &3893206246738884706 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3893206245724707163, guid: b8a20842cfa974240be27ef46b9ae10e, type: 3}
+  m_PrefabInstance: {fileID: 3893206246738884703}
+  m_PrefabAsset: {fileID: 0}
