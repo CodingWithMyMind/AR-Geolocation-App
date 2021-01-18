@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource audioSource3;
     public AudioSource OpenSFX;
     public AudioSource ButtonSound;
+    
 
     public float animationSpeed;
 
@@ -69,12 +70,15 @@ public class AudioManager : MonoBehaviour
         bgm.Play();
     }
 
+
+    //Button animation that make the scale smaller 
     public void animation(Transform btnTransform)
     {
         btnTransform.localScale -= new Vector3(0.4f, 0.4f, 0);
         Invoke("finishAnimate", animationSpeed);
     }
 
+    // Finished button animation that return all button to normal scale after activation the animation
     public void finishAnimate()
     {
        btnReturnToMapTransform.localScale = new Vector3(1, 1, 1);
@@ -87,11 +91,14 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    //Enable and play button sound
     public void buttonSound()
     {
         ButtonSound.Play();
 
     }
+
+    //Case Switch for button to run it own button animation which only makes particluar button run it's function and animation effects
     public void buttonOnClick(string buttonName)
     {
         ButtonSound.Play();
@@ -135,28 +142,37 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+
+    //Load AR scene
     void EnterARScene()
     {
         SceneManager.LoadScene("MapSceneLight", LoadSceneMode.Single);
     }
 
+    //Enable SidePanel
     void SetSidePanel()
     {
         SidePanel.SetActive(true);
         PlaceObject.SetActive(false);
     }
 
+
+    // Load Main menu scene
     void BacktoMenu()
     {
         SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 
+
+    //Screenshot 
     void ScreenShotPanel()
     {
         Holder.SetActive(false);
         Capture.SetActive(true);
     }
 
+
+    //Load Gallary Scene
     void LoadGScene()
     {
         SceneManager.LoadScene("Gallary", LoadSceneMode.Single);

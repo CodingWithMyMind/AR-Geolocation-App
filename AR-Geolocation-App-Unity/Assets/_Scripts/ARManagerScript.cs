@@ -13,6 +13,7 @@ public class ARManagerScript : MonoBehaviour
    
 
     // Start is called before the first frame update
+    //Set OnBoard message active to display information of the page
     void Start()
     {
         if (OnBoardPanel)
@@ -26,6 +27,7 @@ public class ARManagerScript : MonoBehaviour
     {
         
     }
+
 
     public void EnterARScene()
     {
@@ -41,21 +43,26 @@ public class ARManagerScript : MonoBehaviour
         SceneManager.LoadScene("MapSceneLight", LoadSceneMode.Single);
     }
 
+    //Quit Application
     public void Quit()
     {
         Application.Quit();
     }
 
+    //Load AR scene 2
     public void StartARScene2()
     {
         Invoke("StartARScene", 5);
         DisplayStatus("Start in 5", 5);
     }
 
+
+    // Load Ar Scene
     public void StartARScene()
     {
         OnBoardPanel.SetActive(false);
     }
+
 
     public void QuitARScene()
     {
