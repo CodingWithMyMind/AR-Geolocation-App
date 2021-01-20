@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject MapNavUI, ARModeNavUI, LocationsNavUI, GalleryNavUI, InfoNavUI;
 
-
+    
 
     public State state;
 
@@ -119,12 +119,6 @@ public class GameManager : MonoBehaviour
                 }
         }
     }
-
-    /* 
-     * Public Functions to be called from UI elements or from other scripts etc
-     * these will then change the game state to be ran every frame. Can also be 
-     * used like constructers to set up play states 
-    */
 
     public void TurnOnUI(GameObject UIToTurnOn, GameObject UIButtonToTurnOn)
     {

@@ -371,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0617504c7ba5622498a720c69eebe24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceFromPlayerLocationsUI: {fileID: 6830478243738954986}
   ButtonToEnterAR: {fileID: 0}
   ARSceneToEnter: ARScene1
   POIMapName: Little Malop St
