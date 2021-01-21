@@ -882,6 +882,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6242952556315286443, guid: 30c651ebcbba7af49b27719335cbeac5, type: 3}
+      propertyPath: m_EnvironmentDepthMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6242952556315286446, guid: 30c651ebcbba7af49b27719335cbeac5, type: 3}
       propertyPath: m_InteractionLayerMask.m_Bits
       value: 4294967295

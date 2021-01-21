@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/Gallary.unity
     guid: 3614d5bf6fd66c04b989d87c8ab90c74
   - enabled: 1
+    path: Assets/_Scenes/Scene3.unity
+    guid: ed97eb18d9b29ca44b0a9ab4376a6f5e
+  - enabled: 1
     path: Assets/_Scenes/ARScene2Portal.unity
     guid: 06f52999ea57e534c87ba20321766f9a
   m_configObjects:

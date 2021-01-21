@@ -12,7 +12,7 @@ using System;
 public class POIObject : MonoBehaviour
 {
 
-    public Text distanceFromPlayerLocationsUI;
+    //public Text distanceFromPlayerLocationsUI;
 
     public GameObject ButtonToEnterAR;
 
@@ -118,7 +118,7 @@ public class POIObject : MonoBehaviour
         }
 
         mapPOIPinUI.GetComponent<MapPOIUI>().UpdateDistanceFromPlayer(distanceString);
-        distanceFromPlayerLocationsUI.text = distanceString;
+        //distanceFromPlayerLocationsUI.text = distanceString;
 
 
         //Debug.Log(gameObject.name + " is " + distance + " away from player");
