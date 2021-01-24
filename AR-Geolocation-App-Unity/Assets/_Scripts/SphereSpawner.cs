@@ -9,6 +9,7 @@ public class SphereSpawner : MonoBehaviour
     //private GameObject SpawnObjectB;
     //private GameObject SpawnObjectC;
     public GameObject[] SpawnObject;
+    public GameObject CubeBird;
     public GameObject[] Object;
     
     private PlacementIndicator placementIndicator;
@@ -24,7 +25,9 @@ public class SphereSpawner : MonoBehaviour
     void Start()
     {
         placementIndicator = FindObjectOfType<PlacementIndicator>();
-        
+        Instantiate(CubeBird, CubeBird.transform.position, CubeBird.transform.rotation );
+
+
 
     }
 

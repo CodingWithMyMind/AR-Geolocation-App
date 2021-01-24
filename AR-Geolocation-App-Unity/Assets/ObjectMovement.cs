@@ -21,15 +21,21 @@ public class ObjectMovement : MonoBehaviour
         {
             if (MoveRight = true)
             {
-                transform.position = new Vector2(transform.position.x + 200 * Time.deltaTime, transform.position.y);
+                transform.position = new Vector3(transform.position.x + 200 * Time.deltaTime, transform.position.y, transform.position.z);
             }
 
             if (transform.position.x > 1000)
             {
-                transform.position = new Vector2(0f, transform.position.y);
+                transform.position = new Vector3(0f, transform.position.y, transform.position.z);
 
             }
         }
+
+        void OnMouseDown()
+        {
+            Debug.Log("Hello World");
+        }
+
     }
 
 
