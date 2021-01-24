@@ -6,7 +6,7 @@ TagManager:
   tags:
   - POI
   - New tag
-  - KenPOI
+  - GameManager
   layers:
   - Default
   - TransparentFX

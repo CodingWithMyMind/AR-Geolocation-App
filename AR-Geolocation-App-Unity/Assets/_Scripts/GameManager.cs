@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+    
     public enum State { Menu, Map, ARMode, Locations, Gallery, Info};
 
     public GameObject MenuUI, MapUI, ARModeUI, LocationsUI, GalleryUI, InfoUI;
 
     public GameObject MapNavUI, ARModeNavUI, LocationsNavUI, GalleryNavUI, InfoNavUI;
 
-
+    
 
     public State state;
 
@@ -42,13 +44,39 @@ public class GameManager : MonoBehaviour
   //      IOSBuild = true;
 //#endif
 
+       
+
+
+/*           GameObject[] objs = GameObject.FindGameObjectsWithTag("GameManager");
+
+            if (objs.Length > 1)
+            {
+                Destroy(this.gameObject);
+            }
+
+            DontDestroyOnLoad(this.gameObject);
+*/
+
         Instance = this;
+
     }
 
     void Start()
     {
-        
-        state = State.Map;
+        // First time check if has already done the onboarding
+        if (PlayerPrefs.GetInt("onBoarding") == 0)
+        {
+            // if not then enter the main menu/onboarding
+            EnterMenu();
+            // Set player prefs so know has already completed onboarding
+            PlayerPrefs.SetInt("onBoarding", 1);
+            
+        }
+        else
+        {
+            // if player has already completed onboarding then send them to the map
+            EnterMap();
+        }
     }
 
     void Update()
@@ -92,17 +120,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /* 
-     * Public Functions to be called from UI elements or from other scripts etc
-     * these will then change the game state to be ran every frame. Can also be 
-     * used like constructers to set up play states 
-    */
-
-
-
     public void TurnOnUI(GameObject UIToTurnOn, GameObject UIButtonToTurnOn)
     {
         // Set all UI screens off
+        MenuUI.SetActive(false);
         MapUI.SetActive(false);
         ARModeUI.SetActive(false);
         LocationsUI.SetActive(false);
@@ -126,7 +147,7 @@ public class GameManager : MonoBehaviour
     {
 
 
-        //TurnOnUI(MenuUI,MenuNavUI);
+        TurnOnUI(MenuUI,MapNavUI);
    
         state = State.Menu;
     }
@@ -148,7 +169,7 @@ public class GameManager : MonoBehaviour
     {
         TurnOnUI(ARModeUI,ARModeNavUI);
 
-        SceneManager.LoadSceneAsync("ARScene2");
+        SceneManager.LoadSceneAsync(Player.Instance.ARSceneToEnter);
 
         state = State.ARMode;
     }
@@ -174,6 +195,19 @@ public class GameManager : MonoBehaviour
 
 
         state = State.Locations;
+    }
+
+    public void ClearSavedData()
+    {
+        PlayerPrefs.SetInt("onBoarding", 0);
+    }
+
+   
+    void OnApplicationQuit()
+    {
+        // clear the saved data on app quit for testing purposes
+        ClearSavedData();
+        Debug.Log("Application ending after " + Time.time + " seconds");
     }
 
 

@@ -36,7 +36,9 @@
 			{
 				//var locationString = _locationStrings[i];
 
-				var locationString = POIPrefabs[i].GetComponent<POIObject>().locationString;
+				var locationString = POIPrefabs[i].GetComponentInChildren<POIObject>().locationString;
+
+				
 
 				
 				_locations[i] = Conversions.StringToLatLon(locationString);
@@ -67,7 +69,7 @@
 		
 				var spawnedPOIObject = _spawnedPOIObjects[i];
 
-				spawnedObject.GetComponent<POIObject>().mapPOIPinUI = spawnedPOIObject;
+				spawnedObject.GetComponentInChildren<POIObject>().mapPOIPinUI = spawnedPOIObject;
 
 				spawnedPOIObject.transform.localPosition = _map.GeoToWorldPosition(location, true);
 
