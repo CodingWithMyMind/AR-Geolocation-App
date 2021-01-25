@@ -210,5 +210,10 @@ public class GameManager : MonoBehaviour
         Debug.Log("Application ending after " + Time.time + " seconds");
     }
 
+    public void OpenBrower()
+    {
+        Application.OpenURL("https://sites.google.com/view/deakinlpgeo-ar");
+    }
+
 
 }
