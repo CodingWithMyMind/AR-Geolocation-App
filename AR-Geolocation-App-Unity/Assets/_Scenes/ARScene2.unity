@@ -403,6 +403,7 @@ MonoBehaviour:
   BlinkMotion: {fileID: 311750648}
   CaptureSound: {fileID: 1617785157}
   BlinkMotionSpeed: 0.3
+  Blinkdelay: 0.5
 --- !u!114 &170442047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,7 +744,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 442.29538, y: 993.7881}
+  m_AnchoredPosition: {x: 442.29538, y: 784}
   m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &253943305
@@ -2044,7 +2045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -323.70462, y: 993.7881}
+  m_AnchoredPosition: {x: -323.70462, y: 785}
   m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040009754
@@ -4557,7 +4558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21, y: 993.7881}
+  m_AnchoredPosition: {x: 21, y: 784}
   m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775536186
