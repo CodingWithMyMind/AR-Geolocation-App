@@ -215,5 +215,10 @@ public class GameManager : MonoBehaviour
         Application.OpenURL("https://sites.google.com/view/deakinlpgeo-ar");
     }
 
+    public void EnterKenSceene()
+    {
+        SceneManager.LoadScene("ARScene2");
+    }
+
 
 }
